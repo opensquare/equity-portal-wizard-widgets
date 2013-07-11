@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+Common Search Widget
+====================
+
+Intended Use:	Presents a simple search input dialogue that will call a designated channel.
+				Also with optional default styling for input and search results.
+
+Dependencies:	A pw channel to which the entered search term will be posted.
+				For the optional search results styling, expects a container classed up as "search-results"
+					and within that a <ul> with each result as an <li>.  Within a single result <span> can 
+					be used to make columns and <a> to denote actions.
+
+Configuration:	Enable styling by including the css file in the config below.
+
+Example Use:	Include in a parent widget like this:
+
+				<section class="content-header">
+					<div class="widget" name="common-search" searchChannel="docSearch"></div>
+				</section>
+				<section class="content-body">
+					<div class="widget search-results" name="scp-documents-search-results" channel="docSearch"></div>
+				</section>
+
+				Note that first widget has searchChannel attribute that must equal the channel of the (second) results widget.
+				Also note search-results class added to second widget to use styling.
+
+(c) Open Square, 2013
+-->
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>common-search.html</url>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>common-search.css</css>
+		<js>common-search.js</js>
+	</attributes>
+</widget>

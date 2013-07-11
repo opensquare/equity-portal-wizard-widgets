@@ -1,0 +1,12 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>language.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>language.css</css>
+		<js>language.js</js>
+	</attributes>
+</widget>

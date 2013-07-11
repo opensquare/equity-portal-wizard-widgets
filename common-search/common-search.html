@@ -1,0 +1,4 @@
+	<form class="search-form" onSubmit="commonSearchSubmission($(this).closest('[searchChannel]').attr('searchChannel'),this.elements[0].value);return false;">
+		<input type="search" class="search-input" autofocus placeholder="search terms" onclick="commonSearchSubmission($(this).closest('[searchChannel]').attr('searchChannel'),this.value)"/>
+		<button type="submit" class="button search-button">Go</button>
+	</form>

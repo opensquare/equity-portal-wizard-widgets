@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+Menu of Links Prototype Widget
+==============================
+
+Intended Use:	To present a list of links such as is typically found
+				at the top or bottom of a website.  The widget will
+				show all the links available, unless screen width is
+				reduced beyond a threshold whereupon it displays a 
+				small icon that, when clicked, will toggle the menu
+				of links open and shut.
+
+Dependencies:	Minimal styling is applied - styling from a parent
+				widget is expected.
+
+Configuration:	Edit the <a> tags in the html file to set the links. 
+				By default (and courtesy of the target attribute on 
+				those tags) the links will open in the SAME external
+				window.
+				Set the screen width threshold in line 23 of the css
+				file.  Two versions of the small screen menu icon are
+				provided - a light and a dark version - or use your
+				own.  Image file used is set in line 35 of the css.
+
+v1.0 (c) Open Square, 2013
+-->
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>common-header-menu.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<displayheader>false</displayheader>
+		<css>common-header-menu.css</css>
+	</attributes>
+</widget>

@@ -1,0 +1,63 @@
+#content article[subtype='search'] .content-body{
+	padding: 0;
+}
+#content article[subtype='search'] .content-body .content-header{
+	border-top: thin solid;
+	border-radius: 0;
+}
+#content article[subtype='search'] .content-header input.search-input{
+	width: 70%;
+	padding: 0 0.5em;
+	border-color: white;
+	border-radius: 0.25em;
+	font-size: 2em;
+}
+#content article[subtype='search'] .content-body .button.search-button{
+	font-size: 1.8em;
+}
+#content article[subtype='search'] .search-results:empty:before, #content article[subtype='search'] .search-results .widget-content:empty:before{
+	content: 'Enter some search terms above and press Go';
+	display: block;
+	margin: 100px 0;
+	text-align: center;
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #AAA;
+}
+#content article[subtype='search'] .search-results ul{
+	margin: 0;
+	padding: 1em;
+	list-style: none;
+}
+#content article[subtype='search'] .search-results ul:empty:before{
+	content: 'No results found';
+	display: block;
+	margin: 100px 0;
+	text-align: center;
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #AAA;
+}
+#content article[subtype='search'] .search-results li{
+	position: relative;
+	padding: 1em 5.5em 1em 40px;
+	background-image: url('search-dark-small.png');
+	background-repeat: no-repeat;
+	background-position: 6px center;
+}
+#content article[subtype='search'] .search-results li:nth-child(odd){
+	background-color: rgba(0,0,0,0.15);
+}
+#content article[subtype='search'] .search-results li span{
+	max-width: 22%;
+	min-width: 8%;
+	margin-right: 2%;
+}
+#content article[subtype='search'] .search-results li a{
+	position: absolute;
+	display: block;
+	right: 4px;
+	top: 11px;
+	background-color: #777;
+	border-radius: 1em;
+}

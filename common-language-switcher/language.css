@@ -1,0 +1,31 @@
+nav{
+	float: right;
+	margin-top: -5px;
+	background: #CDCDCD;
+	padding: 5px;
+	border-radius: 6px;
+	width: 42px;
+	height: 20px;
+}
+nav:hover{
+	height: 100px;
+}
+nav > #languages {
+	display: none;
+}
+nav:hover > #languages {
+	display: block;
+
+}
+.finnish{
+	background: url('finland.png') no-repeat;
+	display: block;
+	height: 26px;
+	margin: 8px;
+}
+.english{
+	background: url('england.png') no-repeat;
+	display: block;
+	height: 26px;
+	margin: 8px;
+}

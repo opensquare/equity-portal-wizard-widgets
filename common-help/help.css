@@ -1,0 +1,40 @@
+div[name='common-help'] aside{
+	position: fixed;
+	right: 0;
+	background: rgba(0,144,192,0.9);
+	color: #FFF;
+	border-radius: 10em 0 0 10em;
+}
+div[name='common-help'] aside>h2{
+	width: 2.5em;
+	height: 2.5em;
+	overflow: hidden;
+	margin: 0;
+	padding: 0.25em 0.5em 0.25em 1em;
+	cursor: pointer;
+}
+div[name='common-help'] aside.on>h2{
+	width: auto;
+	height: auto;
+	padding-right: 1em;
+	text-align: right;
+}
+div[name='common-help'] h2:hover{
+	padding-right: 1em;
+}
+div[name='common-help'] aside>ul{
+	display: none;
+	max-width: 20em;
+	margin-top: 0;
+	padding-left: 4em;
+}
+div[name='common-help'] aside.on>ul{
+	display: block;
+}
+div[name='common-help'] aside>ul>p{
+	margin: 0 0 0.25em -1em;
+}
+div[name='common-help'] li>a{
+	color: #92CE56;
+	font-weight: bold;
+}
