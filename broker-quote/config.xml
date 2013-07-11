@@ -1,0 +1,11 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>broker-quote.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>broker-quote.css</css>
+	</attributes>
+</widget>

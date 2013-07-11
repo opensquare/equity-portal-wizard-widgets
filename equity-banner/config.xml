@@ -1,0 +1,11 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>equity-banner.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>equity-banner.css</css>
+	</attributes>
+</widget>

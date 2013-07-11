@@ -1,0 +1,12 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>broker-cp.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>broker-cp.css</css>
+		<js>login.js</js>
+	</attributes>
+</widget>
