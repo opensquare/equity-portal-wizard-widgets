@@ -1,5 +1,14 @@
+button{
+	background-color: #07AB7A;
+}
+button:hover{
+	background-color: #009B6A;
+}
+h2{
+	color: #004F37;
+}
 #equity-banner{
-	height: 300px;
+	height: 360px;
 	background: url('JohnBurke@Flickr.com.jpg') no-repeat center;
 	background-size: cover;
 }
