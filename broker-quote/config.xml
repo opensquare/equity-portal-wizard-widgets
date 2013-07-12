@@ -5,7 +5,6 @@
 		<secure>false</secure>
 	</parameters>
 	<attributes>
-		<displayHeader>false</displayHeader>
 		<css>broker-quote.css</css>
 	</attributes>
 </widget>

@@ -1,0 +1,19 @@
+	<h2>Contact at Company</h2>
+	<div class="field title">
+		<label for="input_title">Name</label>
+		<select id="input_title" name="contact.title" rf.source="../common-forms/resources/titles.txt" rf.preselectFirstOption="true">
+			<option disabled selected>Title</option>
+		</select>
+		<input id="input_firstName" type="text" name="contact.firstName" placeholder="First Name"/>
+		<input id="input_surname" type="text" name="contact.surname" placeholder="Surname"/>
+	</div>
+
+	<div class="field email">
+		<label for="input_email">Email Address</label>
+		<input type="email" name="contact.email" rf.validation="email" id="input_email"/>
+	</div>
+
+	<div class="field phone">
+		<label for="input_mobile">Contact Number</label>
+		<input id="input_mobile" type="text" name="contact.phoneNumber" rf.validation="pattern({regex: '^[0-9]{5,}?$', errorMessage:'Invalid Number'})"/>
+	</div>

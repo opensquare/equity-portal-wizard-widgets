@@ -1,0 +1,18 @@
+<script>
+	rf.onFormLoad(function() {
+		if("{{/quote/calcref}}"=="null" || "{{/quote/calcref}}"=="" || "{{/quote/calcref}}" == "{ref}"){
+			$("[rf\\.action=next]").click();
+		} else {
+			$("[rf\\.action=calc]").click();
+		}
+	});
+</script>
+
+<form rhinoforms="true">
+	<h1>Initialising</h1>
+	<div class="loading"></div>
+	<div class="navigation" style="display:none">
+		<input type="submit" rf.action="next" value="Next"/>
+		<input type="submit" rf.action="calc" value="Calc"/>
+	</div>
+</form>

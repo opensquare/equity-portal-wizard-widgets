@@ -1,0 +1,314 @@
+/**** general style */
+div.widget[name='quote-forms'] p {
+	font-size: 1.2em;
+}
+div.widget[name='quote-forms'] .currency:after {
+	content: '£';
+}
+div.widget[name='quote-forms'] .currencyInput {
+	margin-left: -15px;
+}
+div.widget[name='quote-forms'] .rf-debugbar {
+	opacity: 0.15;
+}
+div.widget[name='quote-forms'] .rf-included-false{
+	display: none;
+}
+/* general style ****/
+
+/**** crumb trail */
+div.widget[name='quote-forms'] .crumbTrail li.on {
+	height: 40px;
+	margin-left: 3%;
+	padding-left: 15px;
+	background-color: #0DB4F2;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+div.widget[name='quote-forms'] .crumbTrail li {
+	position: relative;
+	float: left;
+	min-width: 16%;
+	height: 20px;
+	margin: 1% 2% 0 0;
+	padding: 10px 12px 10px 30px;
+	list-style: none;
+	color: #FFF;
+	background: #777 no-repeat 6px center;
+	border-radius: 10em 1em 1em 10em;
+	white-space: nowrap;
+}
+div.widget[name='quote-forms'] .crumbTrail li.on.crumbCustomer:before {
+	background-image: url('person.png');
+}
+div.widget[name='quote-forms'] .crumbTrail li.crumbCustomer {
+	background-image: url('person_small.png');
+}
+div.widget[name='quote-forms'] .crumbTrail li.on.crumbCover:before {
+	background-image: url('transport-car-light.png');
+}
+div.widget[name='quote-forms'] .crumbTrail li.crumbCover {
+	background-image: url('transport-car-light-small.png');
+}
+div.widget[name='quote-forms'] .crumbTrail li.on.crumbQuote:before {
+	background-image: url('currency-sign-pound-light.png');
+}
+div.widget[name='quote-forms'] .crumbTrail li.crumbQuote {
+	background-image: url('currency-sign-pound-light-small.png');
+}
+
+div.widget[name='quote-forms'] .crumbTrail li.on:before {
+	content: '';
+	float: left;
+	width: 75px;
+	height: 75px;
+	margin: -18px 0 0 -50px;
+	border-radius: 10em;
+	background: #0DB4F2 no-repeat center center;
+}
+div.widget[name='quote-forms'] .crumbTrail li.on:after {
+	color: #0DB4F2;
+}
+div.widget[name='quote-forms'] .crumbTrail li:after {
+	content: '♦';
+	position: absolute;
+	top: -20px;
+	right: -17px;
+	color: #777;
+	font-size: 64px;
+}
+/*crumb trail *****/
+
+/***form controls */
+div.widget[name='quote-forms'] input[type="text"], input[type="email"], input[type="password"] {
+	width: 19%;
+	padding: 0.1em 0.25em 0 0.25em;
+	border: thin solid #0090C0;
+	font-size: 1.3em;
+}
+div.widget[name='quote-forms'] label {
+	display: inline-block;
+	font-size: 1.1em;
+	padding: 0 1em 0 1em;
+	width: 40%;
+}
+div.widget[name='quote-forms'] input[type='date'] {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+div.widget[name='quote-forms'] input[type="radio"] {
+	margin: -0.25em 0 0 0;
+	padding: 0.45em;
+	background-color: #FFF;
+	border: thin solid #0090C0;
+	vertical-align: middle;
+	-webkit-appearance: none;
+}
+div.widget[name='quote-forms'] input[type="radio"]:checked {
+	padding: 0.2em 0.4em 0.2em 0.4em;
+	background-color: #0090C0; 
+}
+div.widget[name='quote-forms'] input[type="radio"]:checked:after {
+	content: '\2714';
+	color: #FFF; background-color: #0090C0; /*blue*/
+	font-size: 1.3em;
+}
+div.widget[name='quote-forms'] input[type="button"] {
+	margin: 1em 1em 1em 0; padding: 0.2em 1em;
+	border: none; border-radius: 0.25em;
+	color: #FFF; background-color: #92CE56;
+	font-size: 1em; 
+	cursor: pointer;
+}
+div.widget[name='quote-forms'] input[type="button"]:hover {
+	background-color: #82BE46;
+}
+div.widget[name='quote-forms'] select {
+	border: thin solid #0090C0;
+	width: 20%;
+	margin-left: 0;
+	font-size: 1.3em;
+	color: #AAA;
+}
+div.widget[name='quote-forms'] select.changed {
+	color: inherit;
+}
+div.widget[name='quote-forms'] .dateSel, div.widget[name='quote-forms'] .dateSel select {
+	width: auto;
+}
+
+div.widget[name='quote-forms'] option {
+	color: #333;
+}
+
+div.widget[name='quote-forms'] .invalid-message {
+	font-size: 1em;
+	font-weight: bold;
+	margin-left: 0.5em;
+	padding: 0.25em;
+	color: #FFF;
+	background: #D44;
+	border-radius: 0.25em;
+}
+
+div.widget[name='quote-forms'] div.field {
+	min-height: 2.2em;
+	padding: 1em 0;
+	border-bottom: thin solid rgba(0, 0, 0, 0.1);
+}
+div.widget[name='quote-forms'] div.field:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+div.widget[name='quote-forms'] div.field.on,
+div.widget[name='quote-forms'] div.field.on:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+div.widget[name='quote-forms'] div.field a:hover {
+	color: #82BE46;
+}
+div.widget[name='quote-forms'] div.field a {
+	margin-left: 2em;
+	color: #92CE56;
+	font-weight: bold;
+}
+div.widget[name='quote-forms'] input[type="submit"] {
+	margin: 1em 1em 1em 0;
+	padding: 0.2em 1em;
+	border: none;
+	border-radius: 0.25em;
+	color: #FFF;
+	background-color: #92CE56;
+	font-size: 2em;
+	cursor: pointer;
+}
+div.widget[name='quote-forms'] .navigation {
+	clear: both;
+	text-align: right;
+}
+div.widget[name='quote-forms'] .navigation input[type="button"] {
+	margin: 1em 1em 1em 0;
+	font-size: 2em; 
+}
+div.widget[name='quote-forms'] .navigation input[type="button"]:first-child {
+	font-size: 1.5em; 
+}
+div.widget[name='quote-forms'] .rf-dropdown ul {
+	display: inline-block;
+	max-height: 10em; min-width: 20%;
+	overflow: auto; overflow-x: hidden; overflow-y: auto;
+	margin: 0 0 0 34%;
+	padding: 0;
+	list-style: none;
+	background-color: #FFF;
+	border: thin solid #0090C0;
+	cursor: pointer;
+}
+div.widget[name='quote-forms'] .rf-dropdown li {
+	padding: 0.1em 0.5em;
+}
+div.widget[name='quote-forms'] .rf-dropdown li:hover {
+	color: #FFF; background-color: #0090C0;
+}
+div.widget[name='quote-forms'] .rf-dropdown ul {
+	list-style: none;
+	cursor: pointer;
+}
+/*form controls *****/
+/**** page specific overrides */
+div.widget[name='quote-forms'] .customer-form label {
+	display: inline-block;
+	padding: 0 1em 0 1em;
+	width: 30%;
+	font-size: 1.2em;
+}
+div.widget[name='quote-forms'] #input_title {
+	width: auto;
+}
+div.widget[name='quote-forms'] .field.company input{
+	width:44%;
+}
+div.widget[name='quote-forms'] .field.email input,
+div.widget[name='quote-forms'] .field.phone input{
+	width:28%;
+}
+div.widget[name='quote-forms'] .field.namedDrivers select{
+	width:auto;
+}
+/* page specific overrides *****/
+
+
+
+/******address lookup formatting*/
+div.widget[name='quote-forms'] .findAddress div.labelWrapper {
+	vertical-align: top;
+}
+div.widget[name='quote-forms'] .findAddress div.labelWrapper, div.widget[name='quote-forms'] .findAddress div.tableWrapper {
+	display: inline-block;
+}
+div.widget[name='quote-forms'] .findAddress div.labelWrapper {
+	padding: 0 1em;
+	width: 30.5%;
+}
+div.widget[name='quote-forms'] .findAddress div.tableWrapper {
+	width: 44%;
+}
+div.widget[name='quote-forms'] .customer-form .findAddress label{
+	width: 100%;
+	padding: 0;
+}
+div.widget[name='quote-forms'] .findAddress input {
+	width: 100%;
+}
+div.widget[name='quote-forms'] .addressFound label{
+	vertical-align: top;
+}
+div.widget[name='quote-forms'] #addressLabel{
+	display: inline-block;
+}
+div.widget[name='quote-forms'] #addressLabel span{
+	display: block;
+	font-size: 1.2em;
+}
+div.widget[name='quote-forms'] .pcaCapturePlusTable td {
+	position: static !important;
+	z-index: 1;
+}
+div.widget[name='quote-forms'] table .pcaAutoCompleteSmall>div {
+	width: 100% !important; max-height:10em;
+	overflow-x: hidden;
+	padding-right: 0.6em !important;
+	background-color: #FFF;
+	border: thin solid #0090C0;
+}
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item,
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem {
+	display: inline-block;
+	width: 100%;
+}
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item {
+	border-width: 0 !important;
+}
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item:hover,
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem:hover {
+	background-color: #0090C0;
+}
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item:hover span,
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem:hover span {
+	color: #FFF !important;
+}
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem {
+	background-color: #EEE;
+}
+div.widget[name='quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall {
+	background-color: #FFF;
+}
+div.widget[name='quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall a {
+	margin: 0;
+	color: #000;
+	font-weight: normal;
+}
+div.widget[name='quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+/*address lookup formatting**********/
+

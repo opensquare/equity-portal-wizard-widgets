@@ -1,0 +1,31 @@
+<form class="landingPage" rhinoforms="true" data-crumb="Quote">
+	<h1>Your quote</h1>
+
+	<div id="singlePayment" class="pane">
+		<h2>Single Payment</h2>
+		<p>Total premium: <span class="amount">{{//calcResult/calcElement/totalPremium}}</span></p>
+		<input type="button" rf.action="single" value="Buy"/>
+		<p class="smallprint">This amount includes Insurance Premium Tax of <span class="iptAmount">{{//calcResult/calcElement/tax}}</span></p>
+	</div>
+	
+
+	<div class="navigation">
+		<input type="button" rf.action="back" value="Back"/>
+		<input type="button" value="Save" onclick="$('#save').toggle();"/>
+		<input type="button" rf.action="sorry" style="display:none"/>
+	</div>
+
+	<div id="save" style="display:none">
+		<p>To save your quote for later retrieval you will need to visit this url <span>http://equity-demo.osl-cloud.com/broker-quote?ref={{//calcResult/ref}}</span>.  We can help you remember this by:</p>
+		<ul>
+			<li><span>Bookmarking</span> it in this browser <a href="#">Go</a></li>
+		</ul>
+	</div>
+</form>
+<script type="text/javascript">
+	rf.onFormLoad(function(){
+		if("{{//calcResult/ref}}"=="na"){
+			$("[rf\\.action=sorry]").click();
+		}
+	})
+</script>

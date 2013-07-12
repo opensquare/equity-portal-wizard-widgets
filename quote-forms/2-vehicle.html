@@ -1,0 +1,57 @@
+<form rhinoforms="true" data-crumb="Cover">
+
+	<h1>Cover Details</h1>
+
+	<div class="field cover">
+		<label for="input_coverType">Cover Type</label>
+		<select id="input_coverType" name="cover" rf.source="../common-forms/resources/cover.csv" rf.preselectFirstOption="true" rf.validation="required">
+			<option disabled selected/>
+		</select>
+	</div>
+
+	<div class="field driverAge">
+		<label for="input_driverAge">Age of Main Driver</label>
+		<input id="input_driverAge" name="mainAge" type="text" maxlength="2" rf.validation="required pattern({regex: '^[0-9]*$', errorMessage:'Invalid Number'})">
+	</div>
+
+	<div class="field namedDrivers">
+		<label for="input_namedDrivers">Additional Drivers</label>
+		<select id="input_named" name="drivers" rf.source="../common-forms/resources/drivingRestrictions.csv" rf.preselectFirstOption="true" rf.validation="required">
+			<option disabled selected/>
+		</select>
+	</div>
+
+	<div class="field volxs">
+		<label for="input_volxs">Voluntary Excess (<span class="currency"></span>)</label>
+		<select id="input_volxs" name="volxs" rf.source="../common-forms/resources/volxs.txt" rf.preselectFirstOption="true" rf.validation="required">
+			<option disabled selected/>
+		</select>
+	</div>
+
+	<div class="field">
+		<label for="input_noClaimsYears">Years of No Claims Discount</label>
+		<select id="input_noClaimsYears" name="ncdYears" rf.validation="required" rf.source="../common-forms/resources/noClaimsYears.csv" rf.preselectFirstOption="true"></select>
+	</div>
+
+	<div class="field" rf.includeIf="{ utils.isGreaterThan(fields.ncdYears.value, 0) }">
+		<label for="input_protectNoClaims">Protect No Claims Discount?</label>
+		<input id="input_protectNoClaims" type="checkbox" name="ncdProtect" rf.includeIf="{ utils.isGreaterThan(fields.ncdYears.value, 0) }"></input>
+	</div>
+
+	<div class="field vehicleAge">
+		<label for="input_vehicleAge">Age of Vehicle</label>
+		<select id="input_volxs" name="vehicleAge" rf.source="resources/vehAge.csv" rf.preselectFirstOption="true" rf.validation="required">
+			<option disabled selected/>
+		</select>
+	</div>
+
+	<div class="field vehicleWeight">
+		<label for="input_vehicleWeight">Vehicle Weight (tonnes)</label>
+		<input id="input_vehicleWeight" name="weight" type="text" maxlength="4" rf.validation="required pattern({regex: '^[0-9\.]*$', errorMessage:'Invalid Number'})">
+	</div>
+
+	<div class="navigation">
+		<input type="button" value="Back" rf.action="back"/>
+		<input type="submit" value="Next" rf.action="next"/>
+	</div>
+</form>
