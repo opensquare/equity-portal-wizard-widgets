@@ -1,6 +1,6 @@
 #equity-banner{
 	height: 300px;
-	background: url('equity-banner.jpg') no-repeat center;
+	background: url('JohnBurke@Flickr.com.jpg') no-repeat center;
 	background-size: cover;
 }
 #equity-banner>h1{
@@ -12,7 +12,7 @@
 	display: inline-block;
 	width: 100%;
 	height: 100%;
-	background: url('model-insurance.png') no-repeat left bottom;
+	background: url('equity-logo.png') no-repeat left bottom;
 }
 #equity-banner h2{
 	display: inline-block;
