@@ -13,13 +13,14 @@ function Widget_scp_internal_users_permissions() {
 	this.handleEvent = function(channel, event) {
 		if (channel === channelGroupSelected) {
 			_this.role = event.role;
-			populatePermissions(event.role.id);
+			populatePermissions(event.role.id, "scp");
+            populatePermissions(event.role.id, "rq");
 		}
 	};
 
-	function populatePermissions(groupId) {
-		$.get('proxy/security/permission/all/scp').done(function(permissionArray) {
-			var $permissionsList = $('ul', _this.$widgetDiv);
+	function populatePermissions(groupId, prefix) {
+		$.get('proxy/security/permission/all/' + prefix).done(function(permissionArray) {
+			var $permissionsList = $('ul.' + prefix, _this.$widgetDiv);
 			$permissionsList.empty();
 			for (var i = 0; i < permissionArray.length; i++) {
 				var permissionId = permissionArray[i].id;
