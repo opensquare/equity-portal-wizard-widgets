@@ -10,7 +10,7 @@
 					name: "calc",
 					target: "calculating",
 					submission: {
-						url: "{{$napier-url}}/calcs/{{//calcref}}",
+						url: "{{$calc-url}}?calcRef={{//calcref}}",
 						method: "get",
 						postTransform: "xslt/retrieveCalc.xsl",
 						resultInsertPoint: "/"
@@ -41,6 +41,7 @@
 								data: {
 										quickSearch1: "xpath://brokerCode",
 										quickSearch2: "xpath://customer/address/postcode",
+                                        quickSearch2: "xpath://customer/contact/surname",
 										calcType: "{{$product-calc}}",
 										calcData: "[dataDocument]"
 								},

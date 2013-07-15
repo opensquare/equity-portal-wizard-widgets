@@ -17,9 +17,9 @@
 					<xsl:otherwise>F</xsl:otherwise>
 				</xsl:choose>
 			</ncdProtect>
-			<!--part partname="additionalData">
+			<part partname="additionalData">
 				<xsl:copy-of select="/quote/*[not(name()='calcRef')][not(name()='userType')]"/>
-			</part-->
+			</part>
 		</calcData>
 	</xsl:template>
 </xsl:stylesheet>
