@@ -9,7 +9,7 @@
 			<vehicleAge><xsl:value-of select="/quote/cover/vehicleAge"/></vehicleAge>
 			<drivers><xsl:value-of select="/quote/cover/drivers"/></drivers>
 			<mainAge><xsl:value-of select="/quote/cover/mainAge"/></mainAge>
-			<volxs><xsl:value-of select="/quote/cover/volxs"/></volxs>
+			<volXs><xsl:value-of select="/quote/cover/volxs"/></volXs>
 			<ncdYears><xsl:value-of select="/quote/cover/ncdYears"/></ncdYears>
 			<ncdProtect>
 				<xsl:choose>
