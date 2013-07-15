@@ -41,7 +41,7 @@
 								data: {
 										quickSearch1: "xpath://brokerCode",
 										quickSearch2: "xpath://customer/address/postcode",
-                                        quickSearch2: "xpath://customer/contact/surname",
+                                        quickSearch3: "xpath://customer/contact/surname",
 										calcType: "{{$product-calc}}",
 										calcData: "[dataDocument]"
 								},
@@ -52,7 +52,28 @@
 					}
 				]
 			},
-			{ id: "quote", url: "3-quote.html", actions: [ "back:vehicle", "finish", "sorry:sorry" ] },
+			{ id: "quote", url: "3-quote.html", actions: [ "back:vehicle", "finish", "sorry:sorry", "single:buying" ] },
+            {
+				id: "buying",
+				url: "buying.html",
+				actions : [
+					{
+						name: "next",
+						submission: {
+								preTransform: "xslt/toMM.xsl",
+								url: "{{$mm-url}}/submitjob",
+								data: {
+                                        username: "adam",
+										description: "Equity NB Purchase",
+                                        jobType: "COMBINED",
+										payload: "[dataDocument]"
+								},
+								method: "post",
+						}
+					}
+				]
+			},
+            { id: "complete", url: "complete.html" , actions: [ "next" ]},
 			{ id: "sorry", url: "sorry.html" , actions: [ "restart:customer" ]}
 		]
 	}
