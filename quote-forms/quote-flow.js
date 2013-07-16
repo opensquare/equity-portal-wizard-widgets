@@ -64,11 +64,12 @@
 								url: "{{$mm-url}}/submitjob",
 								data: {
                                         username: "adam",
-										description: "Equity NB Purchase",
-                                        jobType: "COMBINED",
+										description: "Equity Haulage Application",
+                                        jobType: "MERGE",
 										payload: "[dataDocument]"
 								},
 								method: "post",
+                                resultInsertPoint: "/quote/docSubmission"
 						}
 					}
 				]

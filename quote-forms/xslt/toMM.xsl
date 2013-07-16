@@ -4,7 +4,7 @@
     <xsl:template match="/">
         <mmJob xsi:schemaLocation="http://www.opensquare.co.uk/mmJob http://mailmerger.osl-cloud.com/xml/ns/mmJob_2_2.xsd" xmlns="http://www.opensquare.co.uk/mmJob" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <template>
-                <fileName>equity-new-business-certificate.docx</fileName>
+                <fileName>equity-haulage-application.docx</fileName>
                 <mergeType>pdf</mergeType>
             </template>
             <destinations>

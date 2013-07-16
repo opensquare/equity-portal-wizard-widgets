@@ -1,4 +1,19 @@
 <form rhinoforms="true">
 	<h2>Thank you</h2>
-	<p>Thank you for purchasing your policy with us. Your policy documents will be emailed to you shortly.</p>
+	<p>Thank you for your application. We are currently generating your pre-populated application form.</p>
+    <p>Once the application form is ready, please read through it carefully and check that all the details are correct. If everything is correct please print the application form, sign and date it and send it to:</p>
+    <p>Open Insure<br/>34 South Street<br/>London<br/>LN12 5TH</p>
+    <p>When your application form is ready a link to it will become available below. This may take up to 30 seconds, please be patient.</p>
+    <p style="text-align:center" id="docLink"><img src="http://preloaders.net/preloaders/359/Filling%20circles.gif"/></p>
+    <input type="hidden" rf.source="{{$mm-url}}jobs/{{substring-after(/quote/docSubmission, ': ')}}" id="mm_job_proxy"/>
+    <input type="hidden" value="{{$mm-url}}output/document/{{substring-after(/quote/docSubmission, ': ')}}/0" id="mm_doc_proxy"/>
+    <script type="text/javascript">
+        rf.onFormLoad(function(){
+            if("{{replace(replace(/quote/docSubmission,"'","\\'"),"\n","")}}".indexOf('Job submitted successfully') == -1){
+                docFailed();
+            }else{
+                createDocLink();
+            }
+        });
+    </script>
 </form>
