@@ -7,5 +7,6 @@
 		<css>stats.css</css>
 		<js>stats.js</js>
 		<displayHeader>false</displayHeader>
+        <page.title>Executive dashboard</page.title>
 	</attributes>
 </widget>

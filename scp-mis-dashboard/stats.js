@@ -13,7 +13,6 @@ function Widget_scp_mis_dashboard() {
 
 		$('#refreshButton').click(function() {
 			_this.getVolumeStats();
-			_this.getPerformanceStats();
 			$('#statsErrors').hide();
 		});
 		
