@@ -75,7 +75,7 @@
 							<%if (user.isPermitted("scp.internal-products")) {%>
 							<a class="new-square" href="#internal/products" type="internal" subtype="products">Product management</a>
 							<%}%>
-							<%if (user.isPermitted("scp.internal-user-management")) {%>
+							<%if (user.isPermitted("scp.internal-staff-management")) {%>
 							<a class="new-square" href="#internal/staff" type="internal" subtype="users">User management</a>
                             <%}%>
                             <%if (user.isPermitted("scp.internal-broker-management")) {%>
