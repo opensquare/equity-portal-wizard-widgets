@@ -1,9 +1,11 @@
 <widget>
 	<type>internalPage</type>
 	<parameters>
-		<url>scp-mis-dashboard.html</url>
+		<url>stats.html</url>
 	</parameters>
 	<attributes>
-		<page.title>Executive dashboard</page.title>
+		<css>stats.css</css>
+		<js>stats.js</js>
+		<displayHeader>false</displayHeader>
 	</attributes>
 </widget>
