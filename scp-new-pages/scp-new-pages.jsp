@@ -76,7 +76,8 @@
 							<a class="new-square" href="#internal/products" type="internal" subtype="products">Product management</a>
 							<%}%>
 							<%if (user.isPermitted("scp.internal-user-management")) {%>
-							<a class="new-square" href="#internal/users" type="internal" subtype="users">User management</a>
+							<a class="new-square" href="#internal/staff" type="internal" subtype="users">User management</a>
+                            <a class="new-square" href="#internal/brokers" type="internal" subtype="users">Broker management</a>
 							<%}%>
 							<a class="new-square" href="#internal/profile?1234-5678-9012-3456" type="internal" subtype="profile">Personal profile</a>
 							<%if (user.isPermitted("scp.internal-batch")) {%>

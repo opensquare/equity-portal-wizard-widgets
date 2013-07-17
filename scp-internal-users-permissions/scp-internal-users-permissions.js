@@ -13,8 +13,8 @@ function Widget_scp_internal_users_permissions() {
 	this.handleEvent = function(channel, event) {
 		if (channel === channelGroupSelected) {
 			_this.role = event.role;
-			populatePermissions(event.role.id, "scp");
-            populatePermissions(event.role.id, "rq");
+            var filter = this.$widgetDiv.parentsUntil('[filter]').parent().attr("filter");
+			populatePermissions(event.role.id, filter);
 		}
 	};
 

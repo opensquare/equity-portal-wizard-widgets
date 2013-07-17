@@ -1,0 +1,9 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>scp-internal-brokers.html</url>
+	</parameters>
+	<attributes>
+		<page.title>Broker management</page.title>
+	</attributes>
+</widget>

@@ -1,0 +1,9 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>scp-internal-staff.html</url>
+	</parameters>
+	<attributes>
+		<page.title>User management</page.title>
+	</attributes>
+</widget>

@@ -51,7 +51,8 @@ function Widget_scp_internal_users() {
 	};
 
 	function loadGroups() {
-		$.get('proxy/security/role/all').done(function(rolesArray) {
+        var filter = _this.$widgetDiv.attr("filter");
+		$.get('proxy/security/role/all/' + filter).done(function(rolesArray) {
 			_this.roles = rolesArray;
 			populateGroups()
 		});
@@ -90,7 +91,7 @@ function Widget_scp_internal_users() {
 	}
 
 	function loadUsers() {
-		$.get('proxy/security/user/all/scp').done(function(usersArray) {
+		$.get('proxy/security/user/all').done(function(usersArray) {
 			_this.users = usersArray;
 			pw.notifyChannelOfEvent('scp-internal-users.users-loaded', {users:usersArray});
 		});

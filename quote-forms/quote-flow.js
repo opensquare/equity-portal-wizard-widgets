@@ -39,6 +39,7 @@
 								preTransform: "xslt/toNapier.xsl",
 								url: "{{$napier-url}}/calcs",
 								data: {
+                                        source: "xpath://brokerCode",
 										quickSearch1: "xpath://brokerCode",
 										quickSearch2: "xpath://customer/address/postcode",
                                         quickSearch3: "xpath://customer/contact/surname",
@@ -65,6 +66,7 @@
 								data: {
                                         username: "adam",
 										description: "Equity Haulage Application",
+                                        searchTerms: "xpath://brokerCode",
                                         jobType: "MERGE",
 										payload: "[dataDocument]"
 								},
