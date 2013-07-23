@@ -33,7 +33,10 @@ String brokerNumber = oslAttributes.get("brokerNumber");
         </div>
     </article>
     <article type="quote" subtype="search">
-        <div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>" showUrl="broker-quote?ref="/> </div>
+        <div class="widget" name="common-search" css="common-search.css" style="display:none"> </div>
+        <div class="widget search-results" name="scp-quote-search-results" js="scp-quote-search-results.js" searchValue="!<%=brokerNumber%>" channel="quoteSearch" showUrl="broker-quote?ref="> </div>
+        
+        <!--div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>" showUrl="broker-quote?ref="/> </div-->
     </article>
 </section>
 

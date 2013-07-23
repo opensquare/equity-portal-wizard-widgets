@@ -10,11 +10,21 @@ function Widget_scp_quote_search_results() {
 		pw.addListenerToChannel(this, this.channel);
         this.filterIndex = this.$widgetDiv.parentsUntil("[filterIndex]").parent().attr("filterIndex");
         this.filterString = this.$widgetDiv.parentsUntil("[filterIndex]").parent().attr("filterString");
-        this.showUrl = this.$widgetDiv.parentsUntil("[showUrl]").parent().attr("showUrl");
+        this.showUrl = this.$widgetDiv.attr("showUrl");
         if(this.showUrl == null){
-            this.showUrl = "#quote/show/";
+            this.showUrl = this.$widgetDiv.parentsUntil("[showUrl]").parent().attr("showUrl");
+            if(this.showUrl == null){
+                this.showUrl = "#quote/show/";
+            }
         }
 	}
+    
+    this.onReadyExtend = function(){
+        var searchValue = this.$widgetDiv.attr("searchValue");
+        if(searchValue!=null && searchValue!=""){
+            this.napierSearch(searchValue);
+        }
+    }
 	
 	this.handleEvent = function(channel, event) {
 		//this.loadHTMLWithParams("searchValue=" + event.searchValue +"%25");
@@ -61,6 +71,9 @@ function Widget_scp_quote_search_results() {
 	}
 	
 	this.napierQuickSearch = function(terms){
+        if(terms.indexOf("!") == 0){
+            terms = terms.substring(1);
+        }
         var $this = this;
 		var endpoint = 'proxy/napier/';
 		var $searchResultsContainer = $('[channel="quoteSearch"]').parent().find('.search-results ul');
