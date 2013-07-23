@@ -6,7 +6,7 @@
 <%Subject user = SecurityUtils.getSubject();%>
 
 <%
-OslPrinciple oslPrinciple = (OslPrinciple)user.getPrincipals().asList().get(1);
+OslPrinciple oslPrinciple = (OslPrinciple)user.getPrincipals().oneByType(OslPrinciple.class);
 Map<String, String> oslAttributes = oslPrinciple.getAtttributes();
 String brokerNumber = oslAttributes.get("brokerNumber");
 %>
