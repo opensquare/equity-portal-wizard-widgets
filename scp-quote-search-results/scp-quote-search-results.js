@@ -1,20 +1,24 @@
 function Widget_scp_quote_search_results() {
 
 	this.channel = null;
+    this.filterIndex = null;
+    this.filterString = null;
 
 	this.initExtend = function() {
 		this.channel = this.$widgetDiv.attr("channel");
 		pw.addListenerToChannel(this, this.channel);
+        this.filterIndex = this.$widgetDiv.parentsUntil("[filterIndex]").parent().attr("filterIndex");
+        this.filterString = this.$widgetDiv.parentsUntil("[filterIndex]").parent().attr("filterString");
 	}
 	
 	this.handleEvent = function(channel, event) {
 		//this.loadHTMLWithParams("searchValue=" + event.searchValue +"%25");
 		//alert('here!');
 		//this.loadHTMLWithParams("searchValue=" + encodeURIComponent('%25'+ event.searchValue +'%25'));
-		napierSearch(event.searchValue);
+		this.napierSearch(event.searchValue);
 	}
 
-	function napierSearch(terms) {
+	this.napierSearch = function(terms) {
 		if(typeof(terms) != 'undefined') {
 			// quick check if just calcrefs
 			var calcref = parseInt(terms,10);
@@ -24,7 +28,7 @@ function Widget_scp_quote_search_results() {
 
 			if(isNaN(calcref)){
 				// Do a general quicksearch
-				napierQuickSearch(terms);
+				this.napierQuickSearch(terms);
 			} else {
 				var calcref = terms.split(',');
 
@@ -36,13 +40,13 @@ function Widget_scp_quote_search_results() {
 						if(calc.length == 2){
 							if (Math.max(calc[0],calc[1]) - Math.min(calc[0],calc[1]) > 50) {alert(calcref[i] + ' number range is too large')} else {;
 								for (var x=Math.min(calc[0],calc[1]);x<=Math.max(calc[0],calc[1]);x++){
-									napierSearchCalc(x);
+									this.napierSearchCalc(x);
 								}
 							}
 						};
 					} else {
 						// Get a single calc
-						napierSearchCalc(calc);
+						this.napierSearchCalc(calc);
 			  		};
 				};
 			};
@@ -51,7 +55,8 @@ function Widget_scp_quote_search_results() {
 		};
 	}
 	
-	function napierQuickSearch(terms){
+	this.napierQuickSearch = function(terms){
+        var $this = this;
 		var endpoint = 'proxy/napier/';
 		var $searchResultsContainer = $('[channel="quoteSearch"]').parent().find('.search-results ul');
 
@@ -67,7 +72,15 @@ function Widget_scp_quote_search_results() {
 			$(this).find('quickSearch').each(function(){
 				var qsTerms = $(this).text();
 				qsTerms = qsTerms.split(',');
-				$(this).before('<span>'+$.trim(qsTerms[0])+'</span><span>'+$.trim(qsTerms[1])+'</span><span>'+$.trim(qsTerms[2])+'</span><span>'+$.trim(qsTerms[3])+'</span>');
+                var include = true;
+                if($this.filterIndex!=null){
+                    include = qsTerms[$this.filterIndex] == $this.filterString;
+                }
+                if(!include){
+                    $(this).parent().remove();
+                }else{
+                    $(this).before('<span>'+$.trim(qsTerms[0])+'</span><span>'+$.trim(qsTerms[1])+'</span><span>'+$.trim(qsTerms[2])+'</span><span>'+$.trim(qsTerms[3])+'</span>');
+                }
 			});
 			$(this).find('li[calcref]').each(function(){
 				var ref= $(this).attr('calcref');
@@ -76,7 +89,7 @@ function Widget_scp_quote_search_results() {
 		});
 	}
 	
-	function napierSearchCalc(calc){
+	this.napierSearchCalc = function(calc){
 		var endpoint = 'proxy/napier/'
 		var $searchResultsContainer = $('[channel="quoteSearch"]').parent().find('.search-results ul');
 

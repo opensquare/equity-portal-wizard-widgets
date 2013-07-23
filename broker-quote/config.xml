@@ -1,7 +1,7 @@
 <widget>
-	<type>layout</type>
+	<type>internalPage</type>
 	<parameters>
-		<url>broker-quote.html</url>
+		<url>broker-quote.jsp</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>

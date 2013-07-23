@@ -1,10 +1,10 @@
 <widget>
 	<type>internalPage</type>
 	<parameters>
-		<url>scp-quote-search-results.html</url>
+		<url>broker-home.jsp</url>
 	</parameters>
 	<attributes>
+        <css>broker-home.css</css>
 		<displayheader>false</displayheader>
-		<js>scp-quote-search-results.js</js>
 	</attributes>
 </widget>

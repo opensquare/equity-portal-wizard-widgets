@@ -22,7 +22,7 @@ function Widget_broker_cp() {
 				url: 'login',
 				type: 'POST',
 				data: $form.serialize()
-			}).done(function() {
+			}).done(function(data) {
 				window.location = $form.attr('nextWidget');
 			}).fail(function() {
 				httpStatus = jqxhr.status;

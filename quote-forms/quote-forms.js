@@ -5,12 +5,15 @@ function Widget_quote_forms() {
 		// also need broker code
 		var params = getCalcParams(this);
 		var cr;
+        var br;
 		if (params !== null){
-			cr = params.ref;
+            if (typeof params.ref != 'undefined' && params.ref != null && params.ref.indexOf("{") == -1) {
+                cr = params.ref;
+            }
+            br = params.brokerNumber;
 		}
 
-		// broker info temporarily hard coded
-		var broker = '<brokerCode>10512</brokerCode>';
+		var broker = '<brokerCode>' + br + '</brokerCode>';
 
 		var initialData;
 		if (typeof cr != 'undefined') {
@@ -40,9 +43,7 @@ function Widget_quote_forms() {
 			params.replace(/([^=&]+)=([^&]*)/g, function(m, key, value) {
 					paramsObj[key] = value;
 			});
-			if (typeof paramsObj.ref != 'undefined' && paramsObj.ref != null && paramsObj.ref.indexOf("{") == -1) {
-				return paramsObj;
-			}
+			return paramsObj;
 		}
 		return null;
 	}
