@@ -7,7 +7,7 @@ function Widget_quote_forms() {
 		var cr;
         var br;
 		if (params !== null){
-            if (typeof params.ref != 'undefined' && params.ref != null && params.ref.indexOf("{") == -1) {
+            if (typeof params.ref != 'undefined' && params.ref != null && params.ref != "null" && params.ref.indexOf("{") == -1) {
                 cr = params.ref;
             }
             br = params.brokerNumber;

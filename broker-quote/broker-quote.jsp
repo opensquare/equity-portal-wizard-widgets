@@ -9,6 +9,7 @@
 OslPrinciple oslPrinciple = (OslPrinciple)user.getPrincipals().oneByType(OslPrinciple.class);
 Map<String, String> oslAttributes = oslPrinciple.getAtttributes();
 String brokerNumber = oslAttributes.get("brokerNumber");
+String calcRef = request.getParameter("ref");
 %>
 
 <header>
@@ -19,7 +20,7 @@ String brokerNumber = oslAttributes.get("brokerNumber");
 <div class="widget" name="equity-banner" css="equity-banner.css"></div>
 
 <section class="content">
-	<div class="widget" name="quote-forms" data-params="ref={ref}&brokerNumber=<%=brokerNumber%>" css="quote-forms.css" js="quote-forms.js"></div>
+	<div class="widget" name="quote-forms" data-params="ref=<%=calcRef%>&brokerNumber=<%=brokerNumber%>" css="quote-forms.css" js="quote-forms.js"></div>
 </section>
 
 <footer>
