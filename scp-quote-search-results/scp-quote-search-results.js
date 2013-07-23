@@ -3,12 +3,17 @@ function Widget_scp_quote_search_results() {
 	this.channel = null;
     this.filterIndex = null;
     this.filterString = null;
+    this.showUrl = null;
 
 	this.initExtend = function() {
 		this.channel = this.$widgetDiv.attr("channel");
 		pw.addListenerToChannel(this, this.channel);
         this.filterIndex = this.$widgetDiv.parentsUntil("[filterIndex]").parent().attr("filterIndex");
         this.filterString = this.$widgetDiv.parentsUntil("[filterIndex]").parent().attr("filterString");
+        this.showUrl = this.$widgetDiv.parentsUntil("[showUrl]").parent().attr("showUrl");
+        if(this.showUrl == null){
+            this.showUrl = "#quote/show/";
+        }
 	}
 	
 	this.handleEvent = function(channel, event) {
@@ -84,12 +89,13 @@ function Widget_scp_quote_search_results() {
 			});
 			$(this).find('li[calcref]').each(function(){
 				var ref= $(this).attr('calcref');
-				$(this).children('a.button').attr('href','#quote/show/'+ref);
+				$(this).children('a.button').attr('href',$this.showUrl+ref);
 			});
 		});
 	}
 	
 	this.napierSearchCalc = function(calc){
+        var $this = this;
 		var endpoint = 'proxy/napier/'
 		var $searchResultsContainer = $('[channel="quoteSearch"]').parent().find('.search-results ul');
 
@@ -104,7 +110,7 @@ function Widget_scp_quote_search_results() {
 			var xml = $.parseXML($(this).find('calcResponse').text());
 			$(this).append('<span class="currency">'+$(xml).find('annualPremium').first().text()+'</span>');
 
-			$(this).append('<a class="button" href="#quote/show/'+calc+'">show</a>');}
+			$(this).append('<a class="button" href="' + $this.showUrl + calc + '">show</a>');}
 		);
 	}
 	

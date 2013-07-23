@@ -30,7 +30,7 @@ String brokerNumber = oslAttributes.get("brokerNumber");
         <a class="new-square" href="under-construction" type="quote" subtype="new">New Mini Fleet Quote</a>
         <%}%>
     </div>
-    <div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>"/> </div>
+    <div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>" showUrl="broker-quote?ref="/> </div>
 </section>
 
 <footer>
