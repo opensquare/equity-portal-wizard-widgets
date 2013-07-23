@@ -18,19 +18,23 @@ String brokerNumber = oslAttributes.get("brokerNumber");
 
 <div class="widget" name="equity-banner" css="equity-banner.css"></div>
 
-<section id="cp-content">
-    <div class="new-square-group">
-        <%if (user.isPermitted("rq.Haulage")) {%>
-        <a class="new-square" href="broker-quote" type="quote" subtype="new">New Haulage Quote</a>
-        <%}%>
-        <%if (user.isPermitted("rq.Main Fleet")) {%>
-        <a class="new-square" href="under-construction" type="quote" subtype="new">New Main Fleet Quote</a>
-        <%}%>
-        <%if (user.isPermitted("rq.Mini Fleet")) {%>
-        <a class="new-square" href="under-construction" type="quote" subtype="new">New Mini Fleet Quote</a>
-        <%}%>
-    </div>
-    <div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>" showUrl="broker-quote?ref="/> </div>
+<section id="content">
+    <article>
+        <div class="new-square-group">
+            <%if (user.isPermitted("rq.Haulage")) {%>
+            <a class="new-square" href="broker-quote" type="quote" subtype="new">New Haulage Quote</a>
+            <%}%>
+            <%if (user.isPermitted("rq.Main Fleet")) {%>
+            <a class="new-square" href="under-construction" type="quote" subtype="new">New Main Fleet Quote</a>
+            <%}%>
+            <%if (user.isPermitted("rq.Mini Fleet")) {%>
+            <a class="new-square" href="under-construction" type="quote" subtype="new">New Mini Fleet Quote</a>
+            <%}%>
+        </div>
+    </article>
+    <article type="quote" subtype="search">
+        <div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>" showUrl="broker-quote?ref="/> </div>
+    </article>
 </section>
 
 <footer>

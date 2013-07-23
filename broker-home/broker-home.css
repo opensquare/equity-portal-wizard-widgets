@@ -63,7 +63,7 @@ header h2 span{
 	border-radius: 0 0.15em 0.15em 0;
 }
 
-#cp-content{
+#content{
 	width: 80%;
 	min-height: 400px;
 	margin: -6em auto 0 auto;
@@ -72,7 +72,7 @@ header h2 span{
 	border-radius: 0.25em;
 }
 @media screen and (max-width: 1000px) {
-	#cp-content{
+	#content{
 		width:98%;
 	}
 }
@@ -191,4 +191,127 @@ footer p:first-child{
 }
 .register{
 	display: inline-block;
+}
+
+#content article{
+    padding:1em 1em 1em 1em;
+}
+
+/* Search page */
+#content article[type='quote'][subtype='search'] .search-results li:nth-child(odd) {
+	
+}
+#content article[type='quote'][subtype='search'] .search-results li:before {
+	content: attr(calcref);
+	margin-right: 2%;
+}
+#content article[type='quote'][subtype='search'] .search-results li {
+	background-image: url('images/calculator-buttons-small.png');
+}
+#content article[type='quote'][subtype='search'] .search-results li>*{
+	display: none;
+}
+#content article[type='quote'][subtype='search'] .search-results calcSource,
+#content article[type='quote'][subtype='search'] .search-results physicalTime,
+#content article[type='quote'][subtype='search'] .search-results li span{
+	display: inline-block;
+	max-width: 12.5%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#content article[type='quote'][subtype='search'] .search-results li span:empty{
+	display: none !important;
+}
+#content article[type='quote'][subtype='search'] .search-results li a{
+	display: block;
+}
+
+button,a.button,input.button{
+	padding: 0.25em 1em;
+	border: none;
+	border-radius: 0.5em;
+	background: rgba(0,0,0,0.25);
+	color: rgba(255,255,255,0.9);
+	cursor: pointer;
+}
+a.button:hover{
+	border-bottom: none; 
+}
+
+.new-square-group{
+	display: inline-block;
+	padding: 0 0 0 2em;
+}
+.new-square {
+	display: inline-block;
+	width: 8.5em;
+	overflow: hidden;
+	margin: 0 1em 1em 0;
+	padding: 5em 1em 0.5em 1em;
+	background: #999 no-repeat center 1em;
+	color: #FFF;
+	border: medium solid rgba(0,0,0,0.3);
+	border-radius: 1em;
+	text-align: center;
+	vertical-align: top;
+}
+.new-square:hover {
+	text-decoration: underline;
+	border-color: rgba(0,0,0,0.6);
+}
+
+.new-square[type='quote'][subtype='new'] {
+	background-image: url('images/plus-light.png');
+}
+
+.content-header{
+	padding: 1em;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	background-color: #777;
+	color: #FFF;
+}
+.content-header h2,.content-header h3{
+	margin: 0;
+}
+.content-header:hover a{
+	border-bottom: 1px dashed;
+}
+.content-header a.action{
+	float: right;
+	margin-left: 1em;
+	font-size: small;
+}
+.content-helper{
+	border-left: 2px solid #777;
+	border-right: 2px solid #777;
+	background-color: #777;
+	color: #FFF;
+	cursor: pointer;
+}
+.content-helper:after{
+	position: absolute;
+	display: block;
+	content: "+";
+	padding: 3px 10px;
+	background-color: inherit;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
+	font-weight: bold;
+}
+.content-helper:empty{
+	display: none;
+}
+.content-helper>*{
+	display: none;
+	cursor: default;
+}
+.content-body{
+	border: 2px solid #777;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+#content article[subtype='search'] .button.search-button{
+	font-size: 1.8em;
 }
