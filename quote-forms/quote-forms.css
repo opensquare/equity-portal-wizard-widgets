@@ -312,7 +312,7 @@ div.widget[name='quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall .pcaI
 /*address lookup formatting**********/
 
 /* Landing Page styling */
-div.widget[name='quote-forms'] #landingPage .pane {
+div.widget[name='quote-forms'] .landingPage .pane {
 	float: right;
 	clear: both;
 	width: 40%;
@@ -320,17 +320,17 @@ div.widget[name='quote-forms'] #landingPage .pane {
 	vertical-align: top;
 	border: thick solid #0DB4F2; border-radius: 1em;
 }
-div.widget[name='quote-forms'] #landingPage .pane h2 {
+div.widget[name='quote-forms'] .landingPage .pane h2 {
 	margin: 0;
 	padding: 0.2em 0.5em;
 	color: #FFF; background: #0DB4F2;
 }
-div.widget[name='quote-forms'] #landingPage .pane input[type="button"] {
+div.widget[name='quote-forms'] .landingPage .pane input[type="button"] {
 	float: right;
 	margin: 0.5em;
 	font-size: 2em;
 }
-div.widget[name='quote-forms'] #landingPage .amount {
+div.widget[name='quote-forms'] .landingPage .amount {
 	display: inline-block;
 	width: 100%;
 	text-align: right;
@@ -343,41 +343,41 @@ div.widget[name='quote-forms'] .premium {
 div.widget[name='quote-forms'] .premDetail {
 	margin-left: 33.5%;
 }
-div.widget[name='quote-forms'] #landingPage .amount:before, div.widget[name='quote-forms'] #landingPage .instalmentPremium:before,
-div.widget[name='quote-forms']  #landingPage .iptAmount:before, div.widget[name='quote-forms'] #paymentPage .amount:before,
+div.widget[name='quote-forms'] .landingPage .amount:before, div.widget[name='quote-forms'] .landingPage .instalmentPremium:before,
+div.widget[name='quote-forms']  .landingPage .iptAmount:before, div.widget[name='quote-forms'] #paymentPage .amount:before,
 div.widget[name='quote-forms']  #paymentPage .instalmentPremium:before,
 div.widget[name='quote-forms']  #paymentPage .iptAmount:before {
 	content: '£';
 }
-div.widget[name='quote-forms'] #landingPage .pane p {
+div.widget[name='quote-forms'] .landingPage .pane p {
 	margin: 0;
 	padding: 0.5em;
 }
-div.widget[name='quote-forms'] #landingPage p>span {
+div.widget[name='quote-forms'] .landingPage p>span {
 	font-weight: bold;
 }
-div.widget[name='quote-forms'] #landingPage .smallprint {
+div.widget[name='quote-forms'] .landingPage .smallprint {
 	margin-bottom: 0;
 	padding: 0.25em;
 	border-top: thin solid rgba(0,0,0,0.25);
 	font-size: 0.7em;
 }
-div.widget[name='quote-forms'] #landingPage #details {
+div.widget[name='quote-forms'] .landingPage #details {
 	clear: both;
 }
-div.widget[name='quote-forms'] #landingPage h3 {
+div.widget[name='quote-forms'] .landingPage h3 {
 	display: none;
 }
-div.widget[name='quote-forms'] #landingPage .details {
+div.widget[name='quote-forms'] .landingPage .details {
 	min-height: 50px;
 	padding-left: 60px;
 }
-div.widget[name='quote-forms'] #landingPage .duration {
+div.widget[name='quote-forms'] .landingPage .duration {
 	background: url('calendar-year-dark.png') no-repeat; 
 }
-div.widget[name='quote-forms'] #landingPage .vehicle {
+div.widget[name='quote-forms'] .landingPage .vehicle {
 	background: url('transport-car-dark.png') no-repeat; 
 }
-div.widget[name='quote-forms'] #landingPage .drivers {
+div.widget[name='quote-forms'] .landingPage .drivers {
 	background: url('person-user-dark.png') no-repeat; 
 }
