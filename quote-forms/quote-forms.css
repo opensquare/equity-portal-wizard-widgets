@@ -318,12 +318,12 @@ div.widget[name='quote-forms'] .landingPage .pane {
 	width: 40%;
 	margin: 0 2em 2em 2em;
 	vertical-align: top;
-	border: thick solid #0DB4F2; border-radius: 1em;
+	border: thick solid #C40055; border-radius: 1em;
 }
 div.widget[name='quote-forms'] .landingPage .pane h2 {
 	margin: 0;
 	padding: 0.2em 0.5em;
-	color: #FFF; background: #0DB4F2;
+	color: #FFF !important; background: #C40055;
 }
 div.widget[name='quote-forms'] .landingPage .pane input[type="button"] {
 	float: right;
@@ -335,6 +335,7 @@ div.widget[name='quote-forms'] .landingPage .amount {
 	width: 100%;
 	text-align: right;
 	font-size: 2em; font-weight: normal;
+	color: #000;
 }
 div.widget[name='quote-forms'] .premium {
 	display: inline;
@@ -355,6 +356,7 @@ div.widget[name='quote-forms'] .landingPage .pane p {
 }
 div.widget[name='quote-forms'] .landingPage p>span {
 	font-weight: bold;
+	color: #C40055;
 }
 div.widget[name='quote-forms'] .landingPage .smallprint {
 	margin-bottom: 0;
@@ -376,7 +378,7 @@ div.widget[name='quote-forms'] .landingPage .duration {
 	background: url('calendar-year-dark.png') no-repeat; 
 }
 div.widget[name='quote-forms'] .landingPage .vehicle {
-	background: url('transport-car-dark.png') no-repeat; 
+	background: url('transport-truck-dark.png') no-repeat; 
 }
 div.widget[name='quote-forms'] .landingPage .drivers {
 	background: url('person-user-dark.png') no-repeat; 
