@@ -18,7 +18,8 @@ String brokerNumber = oslAttributes.get("brokerNumber");
 <div class="widget" name="equity-banner" css="equity-banner.css"></div>
 
 <section id="content">
-    <article>
+    <details open>
+        <summary><h2>Get a quote</h2></summary>
         <div class="new-square-group">
             <%if (user.isPermitted("rq.Haulage")) {%>
             <a class="new-square" href="broker-quote" type="quote" subtype="new">New Haulage Quote</a>
@@ -30,13 +31,16 @@ String brokerNumber = oslAttributes.get("brokerNumber");
             <a class="new-square" href="under-construction" type="quote" subtype="new">New Mini Fleet Quote</a>
             <%}%>
         </div>
-    </article>
-    <article type="quote" subtype="search">
-        <div class="widget" name="common-search" css="common-search.css" style="display:none"> </div>
-        <div class="widget search-results" name="scp-quote-search-results" js="scp-quote-search-results.js" searchValue="!<%=brokerNumber%>" channel="quoteSearch" showUrl="broker-quote?ref="> </div>
-        
-        <!--div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>" showUrl="broker-quote?ref="/> </div-->
-    </article>
+    </details>
+    <details type="quote" subtype="search">
+        <summary><h2>Previous quotes</h2></summary>
+        <article type="quote" subtype="search">
+            <div class="widget" name="common-search" css="common-search.css" style="display:none"> </div>
+            <div class="widget search-results" name="scp-quote-search-results" js="scp-quote-search-results.js" searchValue="!<%=brokerNumber%>" channel="quoteSearch" showUrl="broker-quote?ref="> </div>
+            
+            <!--div class="widget" name="scp-quote-search" filterIndex="0" filterString="<%=brokerNumber%>" showUrl="broker-quote?ref="/> </div-->
+        </article>
+    </details>
 </section>
 
 <footer>

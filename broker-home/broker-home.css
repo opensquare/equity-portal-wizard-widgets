@@ -24,6 +24,9 @@ button:hover{
 h2{
 	color: #004F37 !important;
 }
+summary h2{
+	display: inline-block;
+}
 
 #backgroundText text{
 	fill: none;
@@ -149,25 +152,19 @@ div.widget>.widget-messages>div.error{
 
 footer{
 	width: 80%;
-	margin: 3em auto 1em auto;
-	background-color: #777;
+	margin: 0.5em auto 1em;
+	padding: 0.1em 1em;
+	font-size: 0.7em;
+	background: #333;
 	color: #FFF;
-	font-size: small;
-	border-radius: 0.25em;
-}
-footer p{
-	padding: 0 1em 1em 1em;
-	margin: 0;
-}
-footer p:first-child{
-	padding-top: 1em;
-	font-weight: bold;
+	border-radius: 0.35em;
 }
 @media screen and (max-width: 1000px) {
 	footer{
 		width:98%;
 	}
 }
+
 .broker{
 	background: url('cp-banner-broker.jpg') no-repeat center;
 }

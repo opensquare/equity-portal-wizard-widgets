@@ -1,0 +1,14 @@
+.common-user .user-name{
+	display: inline-block;
+	width: 20%;
+	max-height: 3em;
+	overflow: hidden;
+	margin-right: 1%;
+	text-align: left;
+	padding: 0.25em 0.25em 0.25em 3em;
+	color: #000;
+	background: rgba(255, 255, 255, 0.85) url('person-dark-small.png') no-repeat 4px 0;
+	border: 1px solid;
+	border-radius: 0.25em;
+	cursor: pointer;
+}
