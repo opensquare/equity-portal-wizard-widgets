@@ -383,3 +383,11 @@ div.widget[name='quote-forms'] .landingPage .vehicle {
 div.widget[name='quote-forms'] .landingPage .drivers {
 	background: url('person-user-dark.png') no-repeat; 
 }
+
+/* thankyou page styling */
+div.widget[name='quote-forms'] .thankyou .address {
+	font-weight: bold;
+}
+div.widget[name='quote-forms'] .thankyou a {
+	color: #07AB7A;
+}
