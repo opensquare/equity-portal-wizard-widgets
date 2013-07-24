@@ -136,10 +136,11 @@ div.widget>.widget-messages>div.error{
 }
 #login-form a{
 	font-size: 0.75em;
-}
-#login-form-enter a{
-	margin-top: 1.5em;
 	color: inherit;
+}
+#login-form-enter a, #login-form-reset a{
+	display: inline-block;
+	margin-top: 1.5em;
 }
 #login-form-reset-text{
 	padding: 0.6em 0;
