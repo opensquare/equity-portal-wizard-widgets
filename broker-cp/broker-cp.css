@@ -47,9 +47,9 @@ header li a{
 
 #cp-content{
 	width: 80%;
-	min-height: 400px;
-	margin: -6em auto 0 auto;
-	background-color: rgba(255,255,255,0.85);
+	min-height: 340px;
+	margin: -8em auto 0 auto;
+	background-color: #FFF;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	border-radius: 0.25em;
 }
@@ -149,20 +149,14 @@ div.widget>.widget-messages>div.error{
 
 footer{
 	width: 80%;
-	margin: 3em auto 1em auto;
-	background-color: #777;
+	margin: 0.5em auto 1em;
+	padding: 0.1em 1em;
+	font-size: 0.7em;
+	background: #333;
 	color: #FFF;
-	font-size: small;
-	border-radius: 0.25em;
+	border-radius: 0.35em;
 }
-footer p{
-	padding: 0 1em 1em 1em;
-	margin: 0;
-}
-footer p:first-child{
-	padding-top: 1em;
-	font-weight: bold;
-}
+
 @media screen and (max-width: 1000px) {
 	footer{
 		width:98%;
