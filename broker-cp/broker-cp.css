@@ -16,10 +16,10 @@ a:hover{
 	text-decoration: underline;
 }
 button{
-	background-color: #07AB7A !important;
+	background-color: #07AB7A;
 }
 button:hover{
-	background-color: #009B6A !important;
+	background-color: #009B6A;
 }
 h2{
 	color: #004F37 !important;
@@ -121,36 +121,36 @@ div.widget>.widget-messages>div.error{
 	float: right;
 	margin-top: 1em;
 	padding: 0.2em 2em;
-	background: #92CE56;
 	color: white;
 	border: none;
 	border-radius: 0.25em;
 	font-size: 1.5em;
 	cursor: pointer;
 }
-#login-form button:hover{
-	background-color: #82BE46;
-}
+
 #login-form-enter{
 	margin-bottom: 2em;
 }
 #login-form-enter button{
-	margin-right: 4em;
+	margin-right: 2em;
 }
 #login-form a{
-	float: left;
-	margin-top: 1.5em;
 	font-size: 0.75em;
-	color: inherit;
-	text-decoration: none;
 }
-#login-form a:hover{
-	text-decoration: underline;
+#login-form-enter a{
+	margin-top: 1.5em;
+	color: inherit;
 }
 #login-form-reset-text{
 	padding: 0.6em 0;
 }
-
+#login-form .separator{
+	float: left;
+	width: 1px;
+	height: 250px;
+	margin: 2em;
+	background: #AAA;
+}
 footer{
 	width: 80%;
 	margin: 0.5em auto 1em;
