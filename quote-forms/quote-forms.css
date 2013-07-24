@@ -163,11 +163,11 @@ div.widget[name='quote-forms'] div.field.on:hover {
 	background-color: rgba(0,0,0,0.2);
 }
 div.widget[name='quote-forms'] div.field a:hover {
-	color: #82BE46;
+	color: #009B6A;
 }
 div.widget[name='quote-forms'] div.field a {
 	margin-left: 2em;
-	color: #92CE56;
+	color: #07AB7A;
 	font-weight: bold;
 }
 div.widget[name='quote-forms'] input[type="submit"] {
@@ -176,7 +176,7 @@ div.widget[name='quote-forms'] input[type="submit"] {
 	border: none;
 	border-radius: 0.25em;
 	color: #FFF;
-	background-color: #92CE56;
+	background-color: #07AB7A;
 	font-size: 2em;
 	cursor: pointer;
 }
@@ -238,9 +238,6 @@ div.widget[name='quote-forms'] .field.namedDrivers select{
 
 
 /******address lookup formatting*/
-div.widget[name='quote-forms'] .findAddress div.labelWrapper {
-	vertical-align: top;
-}
 div.widget[name='quote-forms'] .findAddress div.labelWrapper, div.widget[name='quote-forms'] .findAddress div.tableWrapper {
 	display: inline-block;
 }
@@ -250,6 +247,7 @@ div.widget[name='quote-forms'] .findAddress div.labelWrapper {
 }
 div.widget[name='quote-forms'] .findAddress div.tableWrapper {
 	width: 44%;
+	vertical-align: top;
 }
 div.widget[name='quote-forms'] .customer-form .findAddress label{
 	width: 100%;
@@ -271,6 +269,7 @@ div.widget[name='quote-forms'] #addressLabel span{
 div.widget[name='quote-forms'] .pcaCapturePlusTable td {
 	position: static !important;
 	z-index: 1;
+	cursor: pointer;
 }
 div.widget[name='quote-forms'] table .pcaAutoCompleteSmall>div {
 	width: 100% !important; max-height:10em;

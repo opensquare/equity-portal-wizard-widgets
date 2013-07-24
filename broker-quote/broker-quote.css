@@ -9,6 +9,14 @@ body{
 	background: #F0F0F0;
 	color: #333;
 }
+button,a.button,input.button{
+	padding: 0.25em 1em;
+	border: none;
+	border-radius: 0.5em;
+	background: rgba(0,0,0,0.25);
+	color: rgba(255,255,255,0.9);
+	cursor: pointer;
+}
 a{
 	text-decoration: none;
 }
@@ -36,13 +44,14 @@ summary h2{
 
 header{
 	width: 80%;
+	min-width: 330px;
 	margin: auto;
 	padding: 1em 0 1em 0;
 	background: url('ers-logo.png') no-repeat center left;
 	text-align: right;
 }
-header li a{
-	color: #C40055 !important;
+header .common-user .user-name{
+	min-width: 150px
 }
 @media screen and (max-width: 1000px) {
 	header{
@@ -62,11 +71,6 @@ header li a{
 @media screen and (max-width: 1000px) {
 	#content{
 		width:98%;
-	}
-}
-@media screen and (max-width: 600px) {
-	#cp-banner{
-		zheight: 100px;
 	}
 }
 
@@ -98,6 +102,10 @@ div.widget[name='quote-forms'] form{
 	clear: both;
 	padding: 1em;
 }
+div.widget[name='quote-forms'] .invalid-message{
+	background-color: #C40055 !important;
+}
+
 
 footer{
 	width: 80%;
