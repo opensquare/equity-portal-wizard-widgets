@@ -1,26 +1,32 @@
 <form class="landingPage" rhinoforms="true" data-crumb="Quote">
-	<h1>Your quote</h1>
+	<h2>Your quote</h2>
 
 	<div id="singlePayment" class="pane">
 		<h2>Single Payment</h2>
 		<p>Total premium: <span class="amount">{{//calcResult/calcElement/totalPremium}}</span></p>
-		<input type="button" rf.action="single" value="Buy"/>
 		<p class="smallprint">This amount includes Insurance Premium Tax of <span class="iptAmount">{{//calcResult/calcElement/tax}}</span></p>
 	</div>
-	
+
+	<p>Thank you for considering us for your customer's insurance needs.  Here is our price to insure your customer, as per the stated requirements.</p>
+
+	<h2 id="details">Your details</h2>
+	<p>We have based this quotation on the details that you have provided, a summary of which is shown below.  If any of details are incorrect, you must go back and correct them before proceeding.</p>
+
+	<h3>Duration</h3>
+	<p class="details duration">This is an <span>annual</span> policy which can provide cover from <span>a start date within 30 days of today's date</span>.</p>
+
+	<h3>Vehicle</h3>
+	<p class="details vehicle">The insurance is for a single vehicle of <span>{{//cover/weight}} tonnes</span> owned and operated by <span>{{//customer/name}}</span>.</p>
+
+	<h3>Drivers</h3>
+	<p class="details drivers">The insurance will cover <span>{{//cover/drivers}}</span> on a <span>{{//cover/cover}}</span> basis</p>
 
 	<div class="navigation">
 		<input type="button" rf.action="back" value="Back"/>
-		<input type="button" value="Save" onclick="$('#save').toggle();"/>
+		<input type="button" rf.action="single" value="Buy"/>
 		<input type="button" rf.action="sorry" style="display:none"/>
 	</div>
 
-	<div id="save" style="display:none">
-		<p>To save your quote for later retrieval you will need to visit this url <span>http://equity-demo.osl-cloud.com/broker-quote?ref={{//calcResult/ref}}</span>.  We can help you remember this by:</p>
-		<ul>
-			<li><span>Bookmarking</span> it in this browser <a href="#">Go</a></li>
-		</ul>
-	</div>
 </form>
 <script type="text/javascript">
 	rf.onFormLoad(function(){
