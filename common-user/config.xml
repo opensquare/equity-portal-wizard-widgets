@@ -1,0 +1,9 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>username.html</url>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+	</attributes>
+</widget>

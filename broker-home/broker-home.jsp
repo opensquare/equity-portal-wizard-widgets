@@ -12,8 +12,7 @@ String brokerNumber = oslAttributes.get("brokerNumber");
 %>
 
 <header>
-	<h2>Speak to us today <span>0800 123 456</span></h2>
-	<div class="widget" name="username" css="username.css"></div>
+	<div class="widget" name="common-user"></div>
 </header>
 
 <div class="widget" name="equity-banner" css="equity-banner.css"></div>
