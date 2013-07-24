@@ -26,6 +26,7 @@ h2{
 }
 summary h2{
 	display: inline-block;
+	cursor: pointer;
 }
 
 #backgroundText text{
@@ -36,7 +37,7 @@ summary h2{
 header{
 	width: 80%;
 	margin: auto;
-	padding: 1em 0 2em 0;
+	padding: 1em 0 1em 0;
 	background: url('ers-logo.png') no-repeat center left;
 	text-align: right;
 }
@@ -139,6 +140,12 @@ footer{
 }
 #content article[subtype='search'] .search-results li:nth-child(odd) {
 	background-color: rgba(7,171,122,0.15) !important;
+}
+#content article[type='quote'][subtype='search'] .search-results li:before {
+	content: '#' attr(calcref) !important;
+}
+#content article[type='quote'][subtype='search'] .search-results span:first-child {
+	display: none !important;
 }
 
 button,a.button,input.button{

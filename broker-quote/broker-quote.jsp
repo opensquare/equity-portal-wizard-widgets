@@ -13,8 +13,7 @@ String calcRef = request.getParameter("ref");
 %>
 
 <header>
-	<h2>Speak to us today <span>0800 123 456</span></h2>
-	<div class="widget" name="username" css="username.css"></div>
+	<div class="widget" name="common-user" css="common-user.css"></div>
 </header>
 
 <div class="widget" name="equity-banner" css="equity-banner.css"></div>

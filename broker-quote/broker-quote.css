@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
 body{
 	min-width: 275px;
 	margin: 0;
@@ -5,228 +9,102 @@ body{
 	background: #F0F0F0;
 	color: #333;
 }
-div.widget.broker-quote a{
+a{
 	text-decoration: none;
 }
-div.widget.broker-quote a:hover{
+a:hover{
 	text-decoration: underline;
 }
+button{
+	background-color: #07AB7A !important;
+}
+button:hover{
+	background-color: #009B6A !important;
+}
+h2{
+	color: #004F37 !important;
+}
+summary h2{
+	display: inline-block;
+	cursor: pointer;
+}
 
-div.widget.broker-quote header{
+#backgroundText text{
+	fill: none;
+	stroke: rgba(0, 0, 0, 0.05);
+}
+
+header{
 	width: 80%;
-	margin: 1em auto;
-	padding-bottom: 1em;
+	margin: auto;
+	padding: 1em 0 1em 0;
+	background: url('ers-logo.png') no-repeat center left;
+	text-align: right;
 }
-div.widget.broker-quote h1 {
-	margin-top: 1.5em;
-	margin-bottom: 0.75em;
-	color: #333;
-	font-size: 230%;
-	font-weight: normal;
-} 
-div.widget.broker-quote header h2{
-	float: left;
-	margin: 0;
-	font-size: 1em;
-	color: #0DB4F2; /* Blue */
-}
-div.widget.broker-quote header h2 span{
-	color: #92CE56; /* Green */
+header li a{
+	color: #C40055 !important;
 }
 @media screen and (max-width: 1000px) {
-	div.widget.broker-quote header{
+	header{
 		width:98%;
 	}
 }
-div.username.widget{
-	float:right;
-	width:35%;
-}
-div.widget.broker-quote form {
-	padding: 0.2em 2em 0 2em;
-	clear: both;
-}
-div.widget.broker-quote section.content{
-	position:relative;
+
+#content{
 	width: 80%;
-	min-height: 50em;
-	margin: -6em auto 0 auto;
+	min-height: 340px;
+	margin: -8em auto 0 auto;
+	padding: 0 1em;
+	background-color: #FFF;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	border-radius: 0.25em;
-	padding-bottom: 2em;
-	background-color: rgba(255,255,255,0.85);
-}
-div.widget.broker-quote section.content-pane{
-	position: absolute;
-	width:100%;
-	min-height: 50em;
-	z-index: 0;
-}
-div.widget.broker-quote section.content-pane:first-child{
-	z-index: 1;
-}
-div.widget.broker-quote section.content-pane.overlay{
-	opacity:0;
-	-webkit-transition: all 500ms ease;
-	-moz-transition: all 500ms ease;
-	-ms-transition: all 500ms ease;
-	-o-transition: all 500ms ease;
-	transition: all 500ms ease;
-	transform:scale(1.2,1.2);
-	-ms-transform:scale(1.2,1.2); /* IE 9 */
-	-webkit-transform:scale(1.2,1.2); /* Safari and Chrome */
-	-o-transform:scale(1.2,1.2); /* Opera */
-	-moz-transform:scale(1.2,1.2); /* Firefox */
-}
-div.widget.broker-quote section.content-pane.overlay:target{
-	opacity: 1;
-	z-index: 2;
-	background-color: #FFF;
-	margin-top: 5em;
-	display: block;
-	transform:scale(1,1);
-	-ms-transform:scale(1,1); /* IE 9 */
-	-webkit-transform:scale(1,1); /* Safari and Chrome */
-	-o-transform:scale(1,1); /* Opera */
-	-moz-transform:scale(1,1); /* Firefox */
-}
-div.widget.broker-quote section.content-pane.overlay a.overlay-close{
-	float: right;
-	display: block;
-	margin: 2em;
-	color: inherit;
-	border-bottom: 1px dashed;
-}
-div.widget.broker-quote .summary {
-	border: solid 2px #333;
-	border-radius: 10px;
-	margin-bottom: 5%;
-	margin-left: 5%;
-	margin-top: -5%;
-	width: 90%;
-	padding: 10px
-}
-
-div.widget.broker-quote .summary input[type="text"] {
-	border: none;
-	background: #999;
 }
 @media screen and (max-width: 1000px) {
-	#rq-content{
+	#content{
 		width:98%;
 	}
 }
 @media screen and (max-width: 600px) {
-	#rq-banner{
-		height: 100px;
+	#cp-banner{
+		zheight: 100px;
 	}
 }
 
+div.widget>.widget-head{
+	display: none;
+}
+div.widget>.widget-messages{
+	overflow: hidden;
+	background-color: #A0F0F0;
+	color: #333;
+	border-radius: 0.25em;
+}
+div.widget>.widget-messages>div{
+	padding: 0.25em 0.5em;
+}
+div.widget>.widget-messages>div>a{
+	float: right;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('symbol-close.png') no-repeat;
+	cursor: pointer;
+}
+div.widget>.widget-messages>div.error{
+	background-color: #F0A0A0;
+}
 
-div.widget.broker-quote footer{
+footer{
 	width: 80%;
-	margin: 3em auto 1em auto;
-	background-color: #777;
+	margin: 0.5em auto 1em;
+	padding: 0.1em 1em;
+	font-size: 0.7em;
+	background: #333;
 	color: #FFF;
-	font-size: 0.75em;
-	border-radius: 0.25em;
-}
-div.widget.broker-quote footer p{
-	padding: 0 1em 1em 1em;
-	margin: 0;
-}
-div.widget.broker-quote footer p:first-child{
-	padding-top: 1em;
-	font-weight: bold;
-}
-div.widget.broker-quote .content>div{
-	width: 80%;
-	min-height: 400px;
-	margin: 0 auto;
-	background-color: rgba(255,255,255,0.85);
-	box-shadow: 0 0 10px rgba(0,0,0,0.2);
-	border-radius: 0.25em;
+	border-radius: 0.35em;
 }
 @media screen and (max-width: 1000px) {
-	div.widget.broker-quote footer{
+	footer{
 		width:98%;
 	}
 }
-
-/* TABS */
-
-article.tabs
-{
-	position: relative;
-	display: block;
-	width: 100%;
-	min-height: 20em;
-	margin: 0 auto 2em;
-}
-article.tabs section
-{
-	width: 100%;
-	position: absolute;
-	height: 30em;
-	background-color: #ccc;
-	border-radius: 5px;
-	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
-	z-index: 0;
-}
-article.tabs section:first-child
-{
-	z-index: 1;
-}
-article.tabs section h2
-{
-	position: absolute;
-	font-size: 1em;
-	font-weight: normal;
-	width: 150px;
-	height: 1.8em;
-	top: -1.8em;
-	left: 10px;
-	padding: 0;
-	margin: 0;
-	color: #999;
-	background-color: #ccc;
-	border-radius: 5px 5px 0 0;
-}
-article.tabs section:nth-child(2) h2
-{
-	left: 162px;
-}
-article.tabs section:nth-child(3) h2
-{
-	left: 314px;
-}
-article.tabs section:nth-child(4) h2
-{
-	left: 466px;
-}
-article.tabs section h2 a
-{
-	display: block;
-	width: 100%;
-	line-height: 1.8em;
-	text-align: center;
-	text-decoration: none;
-	color: #333;
-	outline: 0 none;
-}
-article.tabs section:target,
-article.tabs section:target h2
-{
-	color: #333;
-	background-color: #ddd;
-	z-index: 2;
-}
-article.tabs section,
-article.tabs section h2
-{
-	-webkit-transition: all 500ms ease;
-	-moz-transition: all 500ms ease;
-	-ms-transition: all 500ms ease;
-	-o-transition: all 500ms ease;
-	transition: all 500ms ease;
-}	
