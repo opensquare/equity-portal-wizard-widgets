@@ -57,35 +57,19 @@ header li a{
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	border-radius: 0.25em;
 }
+#cp-content .messages li{
+	padding: 0.5em;
+	list-style: none;
+	color: #FFF;
+	background-color: #C40055;
+	text-align: center;
+}
 @media screen and (max-width: 1000px) {
 	#cp-content{
 		width:98%;
 	}
 }
 
-div.widget>.widget-head{
-	display: none;
-}
-div.widget>.widget-messages{
-	overflow: hidden;
-	background-color: #A0F0F0;
-	color: #333;
-	border-radius: 0.25em;
-}
-div.widget>.widget-messages>div{
-	padding: 0.25em 0.5em;
-}
-div.widget>.widget-messages>div>a{
-	float: right;
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background: url('symbol-close.png') no-repeat;
-	cursor: pointer;
-}
-div.widget>.widget-messages>div.error{
-	background-color: #F0A0A0;
-}
 #login-form form{
 	width: 46%;
 	min-width: 275px;

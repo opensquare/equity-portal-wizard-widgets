@@ -9,6 +9,14 @@ body{
 	background: #F0F0F0;
 	color: #333;
 }
+button,a.button,input.button{
+	padding: 0.25em 1em;
+	border: none;
+	border-radius: 0.5em;
+	background: rgba(0,0,0,0.25);
+	color: rgba(255,255,255,0.9);
+	cursor: pointer;
+}
 a{
 	text-decoration: none;
 }
@@ -36,13 +44,14 @@ summary h2{
 
 header{
 	width: 80%;
+	min-width: 330px;
 	margin: auto;
 	padding: 1em 0 1em 0;
 	background: url('ers-logo.png') no-repeat center left;
 	text-align: right;
 }
-header li a{
-	color: #C40055 !important;
+header .common-user .user-name{
+	min-width: 150px
 }
 @media screen and (max-width: 1000px) {
 	header{
@@ -128,7 +137,6 @@ footer{
 #content article[type='quote'][subtype='search'] .search-results physicalTime,
 #content article[type='quote'][subtype='search'] .search-results li span{
 	display: inline-block;
-	max-width: 12.5%;
 	overflow: hidden;
 	white-space: nowrap;
 }
@@ -136,6 +144,9 @@ footer{
 	display: none !important;
 }
 #content article[type='quote'][subtype='search'] .search-results li a{
+	display: none;
+}
+#content article[type='quote'][subtype='search'] .search-results li:hover a{
 	display: block;
 }
 #content article[subtype='search'] .search-results li:nth-child(odd) {
@@ -144,20 +155,8 @@ footer{
 #content article[type='quote'][subtype='search'] .search-results li:before {
 	content: '#' attr(calcref) !important;
 }
-#content article[type='quote'][subtype='search'] .search-results span:first-child {
+#content article[type='quote'][subtype='search'] .search-results li *:first-child, #content article[type='quote'][subtype='search'] .search-results li *:nth-child(9) {
 	display: none !important;
-}
-
-button,a.button,input.button{
-	padding: 0.25em 1em;
-	border: none;
-	border-radius: 0.5em;
-	background: rgba(0,0,0,0.25);
-	color: rgba(255,255,255,0.9);
-	cursor: pointer;
-}
-a.button:hover{
-	border-bottom: none; 
 }
 
 .new-square-group{
