@@ -12,14 +12,14 @@ String brokerNumber = oslAttributes.get("brokerNumber");
 %>
 
 <header>
-	<div class="widget" name="common-user"></div>
+	<div class="widget" name="common-user" css="common-user.css"></div>
 </header>
 
 <div class="widget" name="equity-banner" css="equity-banner.css"></div>
 
 <section id="content">
     <details open>
-        <summary><h2>Get a quote</h2></summary>
+        <summary><h2>Get a new quote</h2></summary>
         <div class="new-square-group">
             <%if (user.isPermitted("rq.Haulage")) {%>
             <a class="new-square" href="broker-quote" type="quote" subtype="new">New Haulage Quote</a>
@@ -33,7 +33,7 @@ String brokerNumber = oslAttributes.get("brokerNumber");
         </div>
     </details>
     <details type="quote" subtype="search">
-        <summary><h2>Previous quotes</h2></summary>
+        <summary><h2>Find a previous quote</h2></summary>
         <article type="quote" subtype="search">
             <div class="widget" name="common-search" css="common-search.css" style="display:none"> </div>
             <div class="widget search-results" name="scp-quote-search-results" js="scp-quote-search-results.js" searchValue="!<%=brokerNumber%>" channel="quoteSearch" showUrl="broker-quote?ref="> </div>
