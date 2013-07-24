@@ -16,13 +16,13 @@ a:hover{
 	text-decoration: underline;
 }
 button{
-	background-color: #07AB7A;
+	background-color: #07AB7A !important;
 }
 button:hover{
-	background-color: #009B6A;
+	background-color: #009B6A !important;
 }
 h2{
-	color: #004F37;
+	color: #004F37 !important;
 }
 
 #backgroundText text{
@@ -37,7 +37,7 @@ header{
 	background: url('ers-logo.png') no-repeat center left;
 }
 header li a{
-	color: #07AB7A;
+	color: #C40055 !important;
 }
 @media screen and (max-width: 1000px) {
 	header{

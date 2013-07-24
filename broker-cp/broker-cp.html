@@ -15,14 +15,14 @@
 				<button id="login-button" type="submit">Login</button>
 				<a href="#" onclick="$('#login-form form').toggle();return false;">Forgotten your details?</a>
 			</form>
-			<div class="register">
+			<form id="login-register">
 				<h2>Not registered yet?</h2>
 				<ul class="messages"/>
 				<p>It's quick and simple to register, click the button below.</p>
-				<a id="formSet">
+				<a href="#">
 					<button id="register-button" >Register</button>
 				</a>
-			</div>
+			</form>
 			<form id="login-form-reset" action="#" onsubmit="login_loginReset();return false;" style="display:none;">
 				<h2>Forgotten your details?</h2>
 				<ul class="messages"/>
@@ -33,3 +33,5 @@
 			</form>
 		</div>
 	</section>
+
+	<div class="widget" name="common-footer"></div>

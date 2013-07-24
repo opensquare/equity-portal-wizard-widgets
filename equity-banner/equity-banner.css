@@ -1,12 +1,3 @@
-button{
-	background-color: #07AB7A;
-}
-button:hover{
-	background-color: #009B6A;
-}
-h2{
-	color: #004F37;
-}
 #equity-banner{
 	height: 360px;
 	background: url('JohnBurke@Flickr.com.jpg') no-repeat center;
@@ -26,9 +17,9 @@ h2{
 }
 #equity-banner h2{
 	display: inline-block;
-	margin: 0;
-	padding: 0 0.5em 0 4em;
-	background: rgba(0,0,0,0.65);
+	margin: 0.5em 0 0 0;
+	padding: 0.25em 0.5em 0.25em 4em;
+	background: rgba(196,0,85,0.65);
 	color: rgba(255,255,255,0.9);
 	font-weight: normal;
 	font-size: 2em;
