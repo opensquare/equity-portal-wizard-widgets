@@ -18,7 +18,7 @@ String calcRef = request.getParameter("ref");
 
 <div class="widget" name="equity-banner" css="equity-banner.css"></div>
 
-<section class="content">
+<section id="content">
 	<div class="widget" name="quote-forms" data-params="ref=<%=calcRef%>&brokerNumber=<%=brokerNumber%>" css="quote-forms.css" js="quote-forms.js"></div>
 </section>
 

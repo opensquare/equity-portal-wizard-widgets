@@ -17,19 +17,11 @@ div.widget[name='quote-forms'] .rf-included-false{
 /* general style ****/
 
 /**** crumb trail */
-div.widget[name='quote-forms'] .crumbTrail li.on {
-	height: 40px;
-	margin-left: 3%;
-	padding-left: 15px;
-	background-color: #0DB4F2;
-	font-size: 1.5em;
-	font-weight: bold;
-}
 div.widget[name='quote-forms'] .crumbTrail li {
 	position: relative;
 	float: left;
 	min-width: 16%;
-	height: 20px;
+	height: 2.5em;
 	margin: 1% 2% 0 0;
 	padding: 10px 12px 10px 30px;
 	list-style: none;
@@ -38,6 +30,13 @@ div.widget[name='quote-forms'] .crumbTrail li {
 	border-radius: 10em 1em 1em 10em;
 	white-space: nowrap;
 }
+div.widget[name='quote-forms'] .crumbTrail li.on {
+	margin-left: 3%;
+	padding-left: 15px;
+	background-color: #07AB7A;
+	font-size: 1.5em;
+	font-weight: bold;
+}
 div.widget[name='quote-forms'] .crumbTrail li.on.crumbCustomer:before {
 	background-image: url('person.png');
 }
@@ -45,10 +44,10 @@ div.widget[name='quote-forms'] .crumbTrail li.crumbCustomer {
 	background-image: url('person_small.png');
 }
 div.widget[name='quote-forms'] .crumbTrail li.on.crumbCover:before {
-	background-image: url('transport-car-light.png');
+	background-image: url('transport-truck-light.png');
 }
 div.widget[name='quote-forms'] .crumbTrail li.crumbCover {
-	background-image: url('transport-car-light-small.png');
+	background-image: url('transport-truck-light-small.png');
 }
 div.widget[name='quote-forms'] .crumbTrail li.on.crumbQuote:before {
 	background-image: url('currency-sign-pound-light.png');
@@ -64,10 +63,10 @@ div.widget[name='quote-forms'] .crumbTrail li.on:before {
 	height: 75px;
 	margin: -18px 0 0 -50px;
 	border-radius: 10em;
-	background: #0DB4F2 no-repeat center center;
+	background: #07AB7A no-repeat center center;
 }
 div.widget[name='quote-forms'] .crumbTrail li.on:after {
-	color: #0DB4F2;
+	color: #07AB7A;
 }
 div.widget[name='quote-forms'] .crumbTrail li:after {
 	content: '♦';

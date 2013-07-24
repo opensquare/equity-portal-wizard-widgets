@@ -94,6 +94,11 @@ div.widget>.widget-messages>div.error{
 	background-color: #F0A0A0;
 }
 
+div.widget[name='quote-forms'] form{
+	clear: both;
+	padding: 1em;
+}
+
 footer{
 	width: 80%;
 	margin: 0.5em auto 1em;
