@@ -1,8 +1,9 @@
-<div id="filter">
-	Source:
-	<select id="calcSourceSelect">
-		<option value="">All</option>
-	</select>
+<div class="statsFilter">
+	<label>Source:
+		<select id="calcSourceSelect">
+			<option value="">All</option>
+		</select>
+	</label>
 	<label>View stats by: 
 		<select id="timePeriod">
 			<option value="hour" selected="selected">Hour</option>
@@ -19,13 +20,15 @@
 </div>
 
 <div class="statsSection">
-	<h2>Traffic Overview</h2>
-	<p>The graph shows a count of the calculations processed in the period.</p>
-	<div><img id= "volumeChart" src="widgets/scp-mis-dashboard/chart.png" alt="Volume chart"/></div>
+	<h2>Quotes Overview</h2>
+	<p>Calculations processed in the period specified.</p>
+	<div>
+		<img id= "volumeChart" src="widgets/scp-mis-dashboard/chart.png" alt="Volume chart"/>
+	</div>
 	<div id="volumeStats">
 		<table class='statsTable'>
 			<tr>
-				<th>Traffic Summary</th>
+				<th></th>
 				<th>#</th>
 			</tr>
 			<tr>

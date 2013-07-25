@@ -37,7 +37,7 @@ div.widget[name='quote-forms'] .crumbTrail li {
 	padding: 10px 12px 10px 30px;
 	list-style: none;
 	color: #FFF;
-	background: #777 no-repeat 6px center;
+	background: #555 no-repeat 6px center;
 	border-radius: 10em 1em 1em 10em;
 	white-space: nowrap;
 }
@@ -66,7 +66,6 @@ div.widget[name='quote-forms'] .crumbTrail li.on.crumbQuote:before {
 div.widget[name='quote-forms'] .crumbTrail li.crumbQuote {
 	background-image: url('currency-sign-pound-light-small.png');
 }
-
 div.widget[name='quote-forms'] .crumbTrail li.on:before {
 	content: '';
 	float: left;
@@ -84,7 +83,7 @@ div.widget[name='quote-forms'] .crumbTrail li:after {
 	position: absolute;
 	top: -20px;
 	right: -17px;
-	color: #777;
+	color: #555;
 	font-size: 64px;
 }
 /*crumb trail *****/

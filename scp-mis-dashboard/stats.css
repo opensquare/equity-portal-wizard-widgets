@@ -1,47 +1,56 @@
-#filter {
-	width:100%;
-	text-align:right;
-	padding-bottom:5px;
-	border-bottom:1px solid black;
+div.widget[name="scp-mis-dashboard"]{
+	padding: 1em;
 }
-.statsSection {
-	margin-top:30px;
+div.widget[name="scp-mis-dashboard"] .statsFilter {
+	text-align: right;
+	padding-bottom: 0.5em;
+	border-bottom: thin solid #AAA;
 }
-.statsSection p {
+div.widget[name="scp-mis-dashboard"] .statsFilter label:first-child {
+	float: left;
+}
+div.widget[name="scp-mis-dashboard"] h2 {
+	margin-top: 2em;
+}
+div.widget[name="scp-mis-dashboard"] .statsSection div {
+	display: inline-block;
+}
+
+div.widget[name="scp-mis-dashboard"] .statsSection p {
 	margin:0px;
 	margin-bottom:10px;
 }
-.statsTable {
+div.widget[name="scp-mis-dashboard"] .statsTable {
 	display:inline-table;
 	font-size:125%;
 	margin:20px 0;
 	width:400px;
 	vertical-align:top;
 }
-.statsTable th:first-child {
+div.widget[name="scp-mis-dashboard"] .statsTable th:first-child {
 	text-align:left;
 	padding:4px;
 }
-.statsTable th:nth-child(2) {
+div.widget[name="scp-mis-dashboard"] .statsTable th:nth-child(2) {
 	font-weight:normal!important;
 	text-align:right!important;
 	padding:4px;
 }
-.statsTable td {
+div.widget[name="scp-mis-dashboard"] .statsTable td {
 	border-bottom:1px dotted silver;
 	vertical-align:middle;
 	padding:4px!important;
 }
-.statsTable td:nth-child(2) {
+div.widget[name="scp-mis-dashboard"] .statsTable td:nth-child(2) {
 	font-family:georgia;
 	font-size:20px!important;
 	padding-left:10px;
 	text-align:right;
 }
-.statsTable tr:last-child {
+div.widget[name="scp-mis-dashboard"] .statsTable tr:last-child {
 	border-bottom:1px solid #444;
 }
-.statsTable a {
+div.widget[name="scp-mis-dashboard"] .statsTable a {
 	color:#48e!important;
 }
 
