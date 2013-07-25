@@ -10,7 +10,9 @@
 							<a class="new-square" href="#quote/search" type="quote" subtype="search">Quote search</a>
 							<%}%>
 							<%if (user.isPermitted("scp.quotes-quote")) {%>
-							<a class="new-square" href="#quote/new" type="quote" subtype="new">New quote</a>
+							<a class="new-square" href="#quote/new" type="quote" subtype="new">New haulage quote</a>
+							<a class="new-square" href="#quote/new" type="quote" subtype="new">New main fleet quote</a>
+							<a class="new-square" href="#quote/new" type="quote" subtype="new">New mini fleet quote</a>
 							<%}%>
 						</div>
 						<%}%>

@@ -42,10 +42,11 @@ img{
 	vertical-align: middle;
 }
 input{
-	border: 1px solid;
+	border: thin solid;
 }
 summary>h2{
 	display: inline-block;
+	cursor: pointer;
 }
 
 /* Chrome specials! */
