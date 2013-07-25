@@ -319,11 +319,11 @@ function Widget_scp_mis_dashboard() {
 	};
 
 	this.getVolumeChartUrl = function(labels, totalCountValues, errorCountValues, maxVal) {
-		return "getChart?chs=600x200&chbh=5,0,5&chtt=&chd=t:" + totalCountValues + "|" + errorCountValues + "&cht=lc&chg=0,25,1,5&chm=o,4D89F9,0,,6|o,C6D9FD,1,,4&chco=4D89F9,C6D9FD&chds=0," + maxVal + "&chxr=1,0," + maxVal + "&chxt=x,y&chl=" + labels + "&chdl=Total Jobs|Failed Jobs"
+		return "getChart?chs=600x200&chbh=5,0,5&chtt=&chd=t:" + totalCountValues + "|" + errorCountValues + "&cht=lc&chg=0,25,1,5&chm=o,8064A2,0,,6|o,C0A4E2,1,,4&chco=8064A2,C0A4E2&chds=0," + maxVal + "&chxr=1,0," + maxVal + "&chxt=x,y&chl=" + labels + "&chdl=Total Jobs|Failed Jobs"
 	};
 
 	this.getPerformanceChartUrl = function(labels, values, count) {
-		return "getChart?chs=600x200&chbh=30,0,20&chd=t:" + values + "&cht=bvg&chco=4D89F9|689BFA|7FAAFB|7FAAFB|7FAAFB|95B8FB|95B8FB|95B8FB|C6D9FD|C6D9FD|C6D9FD&chds=0," + count + "&chxr=1,0," + count + "&chxt=x,y&chl=" + labels;
+		return "getChart?chs=600x200&chbh=30,0,20&chd=t:" + values + "&cht=bvg&chco=4D89F9|689BFA|7FAAFB|7FAAFB|7FAAFB|95B8FB|95B8FB|95B8FB|C0A4E2|C0A4E2|C0A4E2&chds=0," + count + "&chxr=1,0," + count + "&chxt=x,y&chl=" + labels;
 	};
 
 	this.getTimePeriod = function() {
