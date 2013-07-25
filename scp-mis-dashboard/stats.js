@@ -282,7 +282,7 @@ function Widget_scp_mis_dashboard() {
 			var $errorTable = $('#errorTable');
 			for (var i = 0; i < json.errors.length; i++) {
 				var calcID = json.errors[i].calcID;
-				$errorTable.append('<tr class="errorRow"><td>' + calcID + '</td><td>' + json.errors[i].time + '</td><td><a href="#" onclick="window.open(\'showComponent?name=viewCalc&calcRef=' + calcID + '\')">View</a></td></tr>');
+				$errorTable.append('<tr class="errorRow"><td>#' + calcID + '</td><td>' + json.errors[i].time + '</td><td><a href="#" onclick="window.open(\'showComponent?name=viewCalc&calcRef=' + calcID + '\')">View</a></td></tr>');
 			}
 		});	
 	};

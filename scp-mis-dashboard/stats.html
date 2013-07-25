@@ -22,7 +22,7 @@
 <div class="statsSection">
 	<h2>Quotes Overview</h2>
 	<p>Calculations processed in the period specified.</p>
-	<div>
+	<div class="statsGraph">
 		<img id= "volumeChart" src="widgets/scp-mis-dashboard/chart.png" alt="Volume chart"/>
 	</div>
 	<div id="volumeStats">
@@ -52,15 +52,12 @@
 </div>
 
 <div id="statsErrors" class="statsSection" style="display:none;">
-	<h2>Calculation Errors</h2>
-	<p style="line-height:1.5;">The table shows all the recorded errors in the period.</p>
-	<div>
-		<table id="errorTable" class="statsTable">
-			<tr>
-				<th>ID</th>
-				<th>Submitted</th>
-				<th></th>
-			</tr>
-		</table>
-	</div>
+	<h3>Calculation Errors</h3>
+	<table id="errorTable" class="statsErrors">
+		<tr>
+			<th>ID</th>
+			<th>Submitted</th>
+			<th></th>
+		</tr>
+	</table>
 </div>

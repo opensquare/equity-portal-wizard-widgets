@@ -1,6 +1,9 @@
 div.widget[name="scp-mis-dashboard"]{
 	padding: 1em;
 }
+div.widget[name="scp-mis-dashboard"] h2, div.widget[name="scp-mis-dashboard"] h3 {
+	margin-top: 2em;
+}
 div.widget[name="scp-mis-dashboard"] .statsFilter {
 	text-align: right;
 	padding-bottom: 0.5em;
@@ -9,48 +12,28 @@ div.widget[name="scp-mis-dashboard"] .statsFilter {
 div.widget[name="scp-mis-dashboard"] .statsFilter label:first-child {
 	float: left;
 }
-div.widget[name="scp-mis-dashboard"] h2 {
-	margin-top: 2em;
-}
 div.widget[name="scp-mis-dashboard"] .statsSection div {
 	display: inline-block;
+	vertical-align: middle;
 }
-
-div.widget[name="scp-mis-dashboard"] .statsSection p {
-	margin:0px;
-	margin-bottom:10px;
-}
-div.widget[name="scp-mis-dashboard"] .statsTable {
-	display:inline-table;
-	font-size:125%;
-	margin:20px 0;
-	width:400px;
-	vertical-align:top;
-}
-div.widget[name="scp-mis-dashboard"] .statsTable th:first-child {
-	text-align:left;
-	padding:4px;
-}
-div.widget[name="scp-mis-dashboard"] .statsTable th:nth-child(2) {
-	font-weight:normal!important;
-	text-align:right!important;
-	padding:4px;
+div.widget[name="scp-mis-dashboard"] .statsGraph {
+	margin-right: 8%;
 }
 div.widget[name="scp-mis-dashboard"] .statsTable td {
-	border-bottom:1px dotted silver;
-	vertical-align:middle;
-	padding:4px!important;
+	border-bottom: thin dotted #AAA;
+	vertical-align: middle;
+}
+div.widget[name="scp-mis-dashboard"] .statsTable td:first-child {
+	padding: 0.75em 3em 0.75em 0.5em;
 }
 div.widget[name="scp-mis-dashboard"] .statsTable td:nth-child(2) {
-	font-family:georgia;
-	font-size:20px!important;
-	padding-left:10px;
-	text-align:right;
+	font-size: 1.75em;
+	text-align: right;
 }
-div.widget[name="scp-mis-dashboard"] .statsTable tr:last-child {
-	border-bottom:1px solid #444;
+div.widget[name="scp-mis-dashboard"] .statsErrors {
+	width: 100%;
+	table-layout: fixed;
 }
-div.widget[name="scp-mis-dashboard"] .statsTable a {
-	color:#48e!important;
+div.widget[name="scp-mis-dashboard"] .statsErrors th {
+	text-align: left;
 }
-
