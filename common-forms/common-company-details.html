@@ -34,3 +34,17 @@
 			<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
 		</div>
 	</div>
+    
+    <script>
+		rf.onFormLoad(function(){
+			var addressLookupProxyUrl = $("#findAddressProxy").attr("rf.source") + "?rf.flowId=" + $("[name='rf.flowId']").val();
+			var inputErrorCallback = function() {
+				alert("Please provide a valid postcode");
+			}
+			new AddressLookup().init(addressLookupProxyUrl, inputErrorCallback);
+		})
+	
+		$('form select').change( function(){
+			$(this).addClass('changed');
+		})
+	</script>
