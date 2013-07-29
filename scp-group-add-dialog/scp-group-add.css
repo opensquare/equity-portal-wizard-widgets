@@ -1,3 +1,19 @@
 .scp-group-add {
 	padding:10%;
 }
+.scp-group-add h3 {
+	border-bottom: thin solid;
+}
+.scp-group-add input.addGroup {
+	display: block;
+	width: 100%;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+.scp-group-add button.cancel-button {
+	margin-left: 22em
+}
+.scp-group-add button.ok-button {
+	font-size: 1.25em;
+	vertical-align: bottom;
+}

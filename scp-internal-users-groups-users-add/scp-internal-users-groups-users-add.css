@@ -1,8 +1,22 @@
 .scp-internal-users-groups-users-add {
-	padding:10%;
-	width:30em;
+	min-width: 30em;
+	padding: 0 1em 1em;
 }
-
+.scp-internal-users-groups-users-add h3 {
+	border-bottom: thin solid;
+}
 .scp-internal-users-groups-users-add ul {
+	padding-left: 0;
+	line-height: 2em;
 	list-style-type: none;
+}
+.scp-internal-users-groups-users-add input[type='checkbox'] {
+	margin-right: 1em;
+}
+.scp-internal-users-groups-users-add button.cancel {
+	margin-left: 22em
+}
+.scp-internal-users-groups-users-add button.ok {
+	font-size: 1.25em;
+	vertical-align: bottom;
 }
