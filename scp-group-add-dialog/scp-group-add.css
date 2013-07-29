@@ -1,5 +1,6 @@
 .scp-group-add {
-	padding:10%;
+	min-width: 30em;
+	padding: 0 1em 1em;
 }
 .scp-group-add h3 {
 	border-bottom: thin solid;

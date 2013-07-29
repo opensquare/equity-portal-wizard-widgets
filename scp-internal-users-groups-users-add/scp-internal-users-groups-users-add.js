@@ -48,7 +48,7 @@ function Widget_scp_internal_users_groups_users_add() {
 		for (var i = 0; i < _this.users.length; i++) {
 			var user = _this.users[i];
 			if (!doesUserHaveRole(user, _this.role)) {
-				var $li = $('<li><input type="checkbox">' + user.displayName + ' (' + user.username + ')' + '</li>');
+				var $li = $('<li><label><input type="checkbox">' + user.displayName + ' (' + user.username + ')' + '</label></li>');
 				$li.data('user-id', user.id);
 				_this.$usersList.append($li);
 			}
