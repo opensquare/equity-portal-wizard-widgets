@@ -1,12 +1,25 @@
 .scp-internal-users-edit {
-	padding: 10%;
-	width: 30em;
+	min-width: 30em;
+	padding: 0 1em 1em;
+}
+.scp-internal-users-edit h3 {
+	border-bottom: thin solid;
+}
+.scp-internal-users-edit div.nextField {
+	margin: 1em 0;
+}
+.scp-internal-users-edit input[type='text'] {
+	width: 100%;
+	padding: 0 0.25em;
+	font-size: 1.5em;
 }
 .scp-internal-users-edit .error {
 	border: 2px red solid;
 }
-
-.scp-internal-users-edit label {
-	display: inline-block;
-	width: 50%;
+.scp-internal-users-edit button.cancel-button {
+	margin-left: 22em
+}
+.scp-internal-users-edit button.ok-button {
+	font-size: 1.25em;
+	vertical-align: bottom;
 }
