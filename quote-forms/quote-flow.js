@@ -65,7 +65,7 @@
 								url: "{{$mm-url}}/submitjob",
 								data: {
                                         username: "adam",
-										description: "Equity Haulage Application",
+										description: "Demo Haulage Application",
                                         searchTerms: "xpath://brokerCode",
                                         jobType: "MERGE",
 										payload: "[dataDocument]"
